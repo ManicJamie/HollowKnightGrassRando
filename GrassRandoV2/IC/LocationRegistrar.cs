@@ -1,4 +1,5 @@
 ﻿using GrassCore;
+using InControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,26 +14,24 @@ namespace GrassRandoV2.IC
         // Maintained separately to allow quick access time
 
         private static LocationRegistrar? _instance;
-        public static LocationRegistrar Instance { get {
-            _instance ??= new LocationRegistrar();
-            return _instance; } 
-        }
+        public static LocationRegistrar Instance { get { _instance ??= new LocationRegistrar(); return _instance; }  }
 
         public LocationRegistrar()
         {
-            GrassEventDispatcher.Instance.GrassWasCut += GrassCutHandler;
+            GrassEventDispatcher.GrassWasCut += GrassCutHandler;
         }
 
         public void Add(BreakableGrassLocation location)
         {
             TryAddScene(location.sceneName);
-            GrassLocations[location.sceneName][location.gd.ToGrassKey()] = location;
+            GrassRandoV2Mod.Instance.Log($"Adding location {location?.name} w/ key {location?.key}");
+            GrassLocations[location.sceneName][location.key] = location;
         }
 
         public void Remove(BreakableGrassLocation location)
         {
             if (!GrassLocations.TryGetValue(location.sceneName, out var sceneDict)) { return; }
-            sceneDict.Remove(location.gd.ToGrassKey());
+            sceneDict.Remove(location.key);
         }
 
         private BreakableGrassLocation? GetLocation(GrassKey key)
@@ -45,6 +44,7 @@ namespace GrassRandoV2.IC
         private void GrassCutHandler(GrassKey key)
         {
             var location = GetLocation(key);
+            GrassRandoV2Mod.Instance.Log($"{key} - location {location?.name}");
             if (location == null) { return; }
 
             location.Obtain();

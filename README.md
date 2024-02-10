@@ -4,30 +4,19 @@ A Hollow Knight mod that randomizes the grass in the game.
 
 Inspired by the streamer Skurry after watching them talk about other Hollow Knight randomizers.
 
-NOTE: I tried my best to make sure the randomizer had correct logic all the way through. HOWEVER, there are over 3000 "items" being randomized and that makes it quite complex to get the logic 100% correct.
+## Notes
+- I tried my best to make sure the randomizer had correct logic all the way through. HOWEVER, there are over 3000 "items" being randomized and that makes it quite complex to get the logic 100% correct.
 
-NOTE 2: This rando does not currently have a way of dealing with the quantum grass.
+- This rando does not currently have a way of dealing with the quantum grass.
 
-NOTE 3: If the dream grass is enabled, make sure you get all of it in both the dream boss fights and the dream nail collection scene. I DID NOT IMPLEMENT A FAILSAFE FOR THIS.
+- Grass in dream scenes must be collected prior to exiting; if it is not 
 
-I would also like to thanks the developers of the Grass% mod (GrassyKnight) as their grass list did help reduce the amount of time spent locating all of the grass within the game
+I would also like to thank the developers of the Grass% mod (GrassyKnight) as their grass list did help reduce the amount of time spent locating all of the grass within the game
 
-# Required Mods
-RandomizerCore
-
-Randomizer4
-
-ItemChanger
-
-MapChanger
-
-MenuChanger
-
-# Integrations
+## Integrations
 * RandoSettingsManager
 * RandoMapMod - WIP
 
 # TODO
-* add a grass shop for all the grass you've collected
-* add an integration and correct config settings for the rando map mod
-* Find fix to get back into dream locations -> see note 3
+- Grass shop; no spending, we don't have that luxury within logic as far as I can tell (and if we did, it could only hold progression items at low prices)
+- Find fix to get back into dream locations; most likely by creating a surrogate dream nail entry in all cases where it's necessary

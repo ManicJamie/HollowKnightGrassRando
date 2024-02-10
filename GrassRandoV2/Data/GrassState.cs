@@ -1,4 +1,4 @@
-﻿namespace GrassRandoV2.IC
+﻿namespace GrassRandoV2.Data
 {
     enum GrassState
     {

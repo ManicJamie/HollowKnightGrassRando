@@ -5,138 +5,98 @@ using MenuChanger.Extensions;
 using static RandomizerMod.Localization;
 using RandomizerMod.Menu;
 using System.Collections.Generic;
+using GrassRandoV2.Settings;
 
 namespace GrassRandoV2.Rando
 {
 
-    public class GrassRandoSettings
-    {
-        public bool randomizeGrass = false;
-        public bool randomizeQuantumGrass = false;
-        public bool randomizeDreamNailGrass = false;
-        public bool addShop = false;
-
-        public bool KingsPassAndDirtmouth = false;
-        public bool ForgottenCrossroads = false;
-        public bool Greenpath = false;
-        public bool FogCanyon = false;
-        public bool QueensGardens = false;
-        //public bool fungal = false;
-        //public bool resting = false;
-        public bool KingdomsEdge = false;
-        //public bool deepNest = false;
-        public bool AbyssAndAncientBasin = false;
-        public bool WhitePalace = false;
-        public bool GodHome = false;
-        public bool DisplayPickups = true;
-        
-
-        //GrassLocationSettings gls = new();
-
-        [Newtonsoft.Json.JsonIgnore]
-        public bool anygrass => randomizeGrass || randomizeQuantumGrass || KingsPassAndDirtmouth || ForgottenCrossroads || Greenpath
-            || FogCanyon || QueensGardens || KingdomsEdge || AbyssAndAncientBasin || WhitePalace || GodHome;
-    }
-
     public class RandoMenuPage
     {
+        internal MenuPage Page;
+        internal MenuElementFactory<ConnectionSettings> ElementFactory;
+        internal VerticalItemPanel Container;
 
-        internal MenuPage grassRandoPage;
-        internal MenuElementFactory<GrassRandoSettings> grassMEF;
-        internal GridItemPanel grassVIP;
-        internal SmallButton openGrassRandoSet;
-        //internal SmallButton openLocRandoSet;
-        internal List<bool> gRandoElm;
+        internal SmallButton EntryButton;
 
-        //internal MenuPage locPage;
-        //internal LocationMenuPage locMenuPage;
-
-        //internal SmallButton openLocationSettings;
-
-        internal static RandoMenuPage Instance { get; private set; }
-
-        public static void OnExitMenu()
-        {
-            Instance = null;
-        }
+        internal static RandoMenuPage? Instance { get; private set; }
 
         public static void Hook()
         {
-            RandomizerMenuAPI.AddMenuPage(ConstructMenu, HandleButton);
-            MenuChangerMod.OnExitMainMenu += OnExitMenu;
+            RandomizerMenuAPI.AddMenuPage((MenuPage lp) => Instance = new(lp), TryGetMenuButton);
+            MenuChangerMod.OnExitMainMenu += () => Instance = null;
         }
 
-        private static bool HandleButton(MenuPage landingPage, out SmallButton button)
+        private static bool TryGetMenuButton(MenuPage landingPage, out SmallButton button)
         {
-            button = Instance.openGrassRandoSet;
+            button = Instance.EntryButton;
             return true;
         }
 
         private void SetTopLevelButtonColor()
         {
-            if (openGrassRandoSet != null)
+            if (EntryButton != null)
             {
-                openGrassRandoSet.Text.color = Colors.DEFAULT_COLOR;
+                EntryButton.Text.color = GrassRandoV2Mod.Instance.settings.Enabled ? Colors.TRUE_COLOR : Colors.DEFAULT_COLOR;
             }
         }
 
-        private static void ConstructMenu(MenuPage landingPage) => Instance = new(landingPage);
-
-        public void PasteSettings(GrassRandoSettings settings)
+        public void PasteSettings(ConnectionSettings settings)
         {
-            if (settings == null )
-            {
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.randomizeGrass)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.randomizeQuantumGrass)].SetValue(false);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.randomizeDreamNailGrass)].SetValue(false);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.addShop)].SetValue(false);
-
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.KingsPassAndDirtmouth)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.ForgottenCrossroads)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.Greenpath)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.FogCanyon)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.QueensGardens)].SetValue(true);
-                //grassMEF.ElementLookup[nameof(GrassRandoSettings.fungal)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.WhitePalace)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.KingdomsEdge)].SetValue(true);
-                //grassMEF.ElementLookup[nameof(GrassRandoSettings.deepNest)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.AbyssAndAncientBasin)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.GodHome)].SetValue(true);
-                grassMEF.ElementLookup[nameof(GrassRandoSettings.DisplayPickups)].SetValue(true);
-
-                return;
-            }
-
-            grassMEF.SetMenuValues(GrassRandoV2Mod.settings);
-            //locMenuPage.locMEF.SetMenuValues(GrassRandoV2Mod.settings);
-
+            ElementFactory.SetMenuValues(GrassRandoV2Mod.Instance.settings);
         }
 
         private RandoMenuPage(MenuPage lp)
         {
-            grassRandoPage = new MenuPage("Grass Rando Settings", lp);
-            grassMEF = new(grassRandoPage, GrassRandoV2Mod.settings);
-            grassVIP = new(grassRandoPage, new(0, 300), 3, 75f, 450, true, grassMEF.Elements);
+            Page = new MenuPage("Grass Randomizer", lp);
+            ElementFactory = new(Page, GrassRandoV2Mod.Instance.settings);
+            EntryButton = new(lp, Localize("Grass Randomizer"));
+            EntryButton.AddHideAndShowEvent(lp, Page);
+            lp.BeforeShow += SetTopLevelButtonColor;
 
-            //locMenuPage = new LocationMenuPage(grassRandoPage);
-
-
-            foreach (IValueElement e in grassMEF.Elements)
+            IMenuElement[] topBarContents = new IMenuElement[]
             {
-                e.SelfChanged += obj => SetTopLevelButtonColor();
-            }
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Enabled)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.DisplayItems)],
+            };
 
-            openGrassRandoSet = new(lp, Localize("Grass Rando"));
-            openGrassRandoSet.AddHideAndShowEvent(lp, grassRandoPage);
+            IMenuElement[] includesBarContents = new IMenuElement[]
+            {
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.IncludeDreams)],
 
-            //openLocRandoSet = new(grassRandoPage, "Location Settings");
-            //openLocRandoSet.AddHideAndShowEvent(grassRandoPage, locMenuPage.lPage);
+            };
 
-            SetTopLevelButtonColor();
+            IMenuElement[] areasBarContents = new IMenuElement[]
+            {
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Kings_Pass)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Dirtmouth)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Crossroads)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Greenpath)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Fungal)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Fog_Canyon)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Gardens)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Grounds)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.City)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Edge)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Deepnest)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Basin)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Abyss)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Palace)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Godhome)],
+            };
 
+            GridItemPanel MainPanel = new(Page, new(0, 300), 2, SpaceParameters.VSPACE_SMALL, SpaceParameters.HSPACE_SMALL, false, topBarContents);
+            GridItemPanel IncludesPanel = new(Page, new(0, 300), 1, SpaceParameters.VSPACE_SMALL, SpaceParameters.HSPACE_SMALL, false, includesBarContents);
+            GridItemPanel AreasPanel = new(Page, new(0, 300), 3, SpaceParameters.VSPACE_SMALL, SpaceParameters.HSPACE_SMALL, false, areasBarContents);
+
+            IMenuElement[] AllPanels = new IMenuElement[]
+            {
+                MainPanel,
+                IncludesPanel,
+                AreasPanel
+            };
+
+            Container = new(Page, new(0, 300), SpaceParameters.VSPACE_LARGE, true, AllPanels);
         }
-
-
 
     }
 }

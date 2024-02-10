@@ -63,11 +63,11 @@
     <None Remove="dependabot.yml" />
     <None Remove="README.md" />
     <None Remove="Resources\grassIcon.png" />
-    <None Remove="Resources\GrassLog.json" />
+    <None Remove="Resources\Locations.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\grassIcon.png" />
-    <EmbeddedResource Include="Resources\GrassLog.json" />
+    <EmbeddedResource Include="Resources\Locations.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -91,6 +91,9 @@
 	<Reference Include="GrassCore">
 		<HintPath>$(HollowKnightRefs)/Mods/GrassCore/GrassCore.dll</HintPath>
 	</Reference>
+	  <Reference Include="RandoSettingsManager">
+		  <HintPath>$(HollowKnightRefs)/Mods/RandoSettingsManager/RandoSettingsManager.dll</HintPath>
+	  </Reference>
     <Reference Include="MMHOOK_Assembly-CSharp">
       <HintPath>$(HollowKnightRefs)/MMHOOK_Assembly-CSharp.dll</HintPath>
     </Reference>

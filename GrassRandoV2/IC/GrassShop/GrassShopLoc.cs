@@ -1,4 +1,5 @@
-﻿using ItemChanger;
+﻿using GrassRandoV2.Data;
+using ItemChanger;
 using ItemChanger.Locations;
 using ItemChanger.Locations.SpecialLocations;
 using RandomizerMod.RC;
@@ -9,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static GrassRandoV2.IC.ICManager;
 
 namespace GrassRandoV2.IC.GrassShop
 {
@@ -18,7 +18,7 @@ namespace GrassRandoV2.IC.GrassShop
 
         public string objectName;
         //public string fsmType;
-        public grassdata gd;
+        public GrassData_New gd;
         //public Fsm fsm;
         private chestLoc cLoc;
         private tabletLoc tablet;
