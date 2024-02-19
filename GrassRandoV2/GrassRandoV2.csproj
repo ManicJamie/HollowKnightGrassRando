@@ -130,9 +130,6 @@
     <Reference Include="RandomizerMod">
       <HintPath>$(HollowKnightRefs)/Mods/Randomizer 4/RandomizerMod.dll</HintPath>
     </Reference>
-    <Reference Include="RandoSettingsManager">
-      <HintPath>RandoSettingsManager.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition">
       <HintPath>$(HollowKnightRefs)/System.ComponentModel.Composition.dll</HintPath>
     </Reference>

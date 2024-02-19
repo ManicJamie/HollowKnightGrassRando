@@ -18,7 +18,7 @@ namespace GrassRandoV2.Data
         {
             using StreamReader reader = new StreamReader(typeof(JsonUtil).Assembly.GetManifestResourceStream(embeddedResourcePath));
             using JsonTextReader reader2 = new JsonTextReader(reader);
-            return _js.Deserialize<T>(reader2);
+            return _js.Deserialize<T>(reader2)!;
         }
 
         static JsonUtil()

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 namespace GrassRandoV2.IC
 {
@@ -23,15 +24,65 @@ namespace GrassRandoV2.IC
 
         public void Add(BreakableGrassLocation location)
         {
-            TryAddScene(location.sceneName);
-            GrassRandoV2Mod.Instance.Log($"Adding location {location?.name} w/ key {location?.key}");
-            GrassLocations[location.sceneName][location.key] = location;
+            TryAddScene(location.sceneName!);
+            GrassLocations[location.sceneName!][location.key] = location;
         }
 
         public void Remove(BreakableGrassLocation location)
         {
-            if (!GrassLocations.TryGetValue(location.sceneName, out var sceneDict)) { return; }
+            if (!GrassLocations.TryGetValue(location.sceneName!, out var sceneDict)) { return; }
             sceneDict.Remove(location.key);
+        }
+
+        /// <summary>
+        /// Retrieves a dictionary of GrassKey:GrassLocation for the current scene, or an empty dict if the scene has no locations.
+        /// </summary>
+        public Dictionary<GrassKey, BreakableGrassLocation>? GetLocationsInScene(string sceneName)
+        {
+            if (!GrassLocations.TryGetValue(sceneName, out var sceneDict)) { return new(); }
+            return sceneDict;
+        }
+
+        /// <summary>
+        /// Retrieves a list of locations in the scene that have no items left to collect
+        /// </summary>
+        public List<BreakableGrassLocation> GetObtainedGrass(string sceneName)
+        {
+            var sceneLocations = GetLocationsInScene(sceneName);
+            if (sceneLocations == null) return new();
+
+            List<BreakableGrassLocation> obtained = new();
+            foreach (var kvp in sceneLocations)
+            {
+                var loc = kvp.Value;
+                if (loc.Placement.AllObtained())
+                {
+                    obtained.Add(loc);
+                }
+            }
+
+            return obtained;
+        }
+
+        /// <summary>
+        /// Retrieves a list of locations in the scene that have items to collect
+        /// </summary>
+        public List<BreakableGrassLocation> GetUnobtainedGrass(string sceneName)
+        {
+            var sceneLocations = GetLocationsInScene(sceneName);
+            if (sceneLocations == null) return new();
+
+            List<BreakableGrassLocation> obtained = new();
+            foreach (var kvp in sceneLocations)
+            {
+                var loc = kvp.Value;
+                if (!loc.Placement.AllObtained())
+                {
+                    obtained.Add(loc);
+                }
+            }
+
+            return obtained;
         }
 
         private BreakableGrassLocation? GetLocation(GrassKey key)
@@ -44,11 +95,10 @@ namespace GrassRandoV2.IC
         private void GrassCutHandler(GrassKey key)
         {
             var location = GetLocation(key);
-            GrassRandoV2Mod.Instance.Log($"{key} - location {location?.name}");
+            GrassRandoV2Mod.Instance.LogDebug($"{key} - location {location?.name}");
             if (location == null) { return; }
 
             location.Obtain();
-            GrassRegister_Rando.Instance.TryCut(key); // Set as cut for WeedKiller
         }
 
         private void TryAddScene(string sceneName)

@@ -50,6 +50,7 @@ namespace GrassRandoV2.IC
         public static void DefineItemLocs()
         {
             Finder.DefineCustomItem(CreateGrassItem());
+            Finder.DefineCustomLocation(CreateGrassShop());
             foreach (var g in GrassDataRegister.gd)
             {
                 var loc = CreateGrassLocation(g);
@@ -76,6 +77,17 @@ namespace GrassRandoV2.IC
             };
         }
 
+        public static GrassShopLocation CreateGrassShop()
+        {
+            return new()
+            {
+                name = "Grass_Shop", // TODO: replace with localized const
+                sceneName = "Room_Slug_Shrine",
+                objectName = "Quirrel Slug Shrine",
+                fsmName = "npc_control",
+            };
+        }
+
         private static BreakableGrassLocation CreateGrassLocation(GrassData_New gd)
         {
             return new(gd.key)
@@ -87,7 +99,6 @@ namespace GrassRandoV2.IC
                     {
                         InteropTagFactory.CmiLocationTag(
                             poolGroup: gd.GetGroupName(),
-                            sceneNames: new List<string> { gd.key.SceneName },
                             mapLocations: new (string, float, float)[]
                             {
                                 (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)

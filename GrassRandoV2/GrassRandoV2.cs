@@ -12,17 +12,12 @@ using GrassRandoV2.Settings;
 
 namespace GrassRandoV2
 {
-    public class SaveData
-    {
-        public int knightDreamGrassBroken;
-        public int mageDreamGrassBroken;
-    }
     public class GrassRandoV2Mod : Mod, ILocalSettings<SaveData>, IGlobalSettings<ConnectionSettings>
     {
         private static GrassRandoV2Mod? _instance;
         public static GrassRandoV2Mod Instance { get { _instance ??= new GrassRandoV2Mod(); return _instance; } }
 
-        public SaveData sd = new();
+        public SaveData saveData = new();
 
         public readonly GrassRegister_Global grassRegister = new();
 
@@ -32,20 +27,16 @@ namespace GrassRandoV2
         new public string GetName() => "Grass Randomizer";
         public override string GetVersion() => "v1.1";
 
-        public GrassRandoV2Mod() : base("GrassRandoV2")
+        public GrassRandoV2Mod() : base("GrassRando")
         {
         }
 
-        //initilizations for the mod
         public override void Initialize()
         {
-            Log("Prepping the Grando");
+            Log("Initializing");
 
-            GrassCore.GrassCore.Instance.CutsEnabled = true; // Get grass events from GrassCore
-            GrassCore.GrassCore.Instance.WeedkillerEnabled = true; // Despawn already collected grass
-            GrassCore.GrassCore.Instance.DisconnectWeedKiller = true; // Do not use GrassCore's internal grass dict (we will use our own)
-
-            GrassCore.WeedKiller.Instance.Blacklist = grassRegister._grassStates; // Use our internal tracker for WeedKiller
+            GrassCoreMod.Instance.CutsEnabled = true; // Get grass events from GrassCore
+            // GrassCore contains WeedKiller, but its easier to just do it ourselves in a module.
 
             // Menu pages
             RandoMenuPage.Hook();
@@ -57,39 +48,34 @@ namespace GrassRandoV2
             // Hook rando generator
             RandoManager.Hook();
 
-            Log("Grando is ready");
+            Log("Initialized");
         }
 
-        //sets up the hook for the rando settings managers
         private void HookRSM()
         {
             RandoSettingsManagerMod.Instance.RegisterConnection(new SimpleSettingsProxy<ConnectionSettings>(
                 this,
-                (st) => settings = st ?? settings,
+                (st) => {
+                    if (st == null) 
+                    {
+                        settings.Enabled = false;
+                    }
+                    else
+                    {
+                        settings = st;
+                    }
+                },
                 () => settings.Enabled ? settings : null
             ));
         }
 
-        public void OnLoadLocal(SaveData s)
-        {
-            sd = s;
-            grassRegister.Clear();
-        }
+        // Save management
+        public void OnLoadLocal(SaveData s) => saveData = s;
+        public SaveData OnSaveLocal() => saveData ?? new();
 
-        public SaveData OnSaveLocal()
-        {
-            return sd;
-        }
-
-        public void OnLoadGlobal(ConnectionSettings s)
-        {
-            settings = s;
-        }
-
-        public ConnectionSettings OnSaveGlobal()
-        {
-            return settings ?? new();
-        }
+        // Settings management
+        public void OnLoadGlobal(ConnectionSettings s) => settings = s;
+        public ConnectionSettings OnSaveGlobal() => settings ?? new();
 
     }
 }

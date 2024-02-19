@@ -6,7 +6,7 @@ namespace GrassRandoV2.IC
 {
     public static class InteropTagFactory
     {
-        private static void SetProperty(this InteropTag t, string prop, object value)
+        private static void SetProperty(this InteropTag t, string prop, object? value)
         {
             if (value != null)
             {
@@ -29,7 +29,7 @@ namespace GrassRandoV2.IC
         private const string RiSourceProperty = "DisplaySource";
         private const string RiIgnoreProperty = "IgnoreItem";
 
-        public static InteropTag CmiSharedTag(string poolGroup = null, ISprite pinSprite = null)
+        public static InteropTag CmiSharedTag(string? poolGroup = null, ISprite? pinSprite = null)
         {
             InteropTag t = new()
             {
@@ -39,14 +39,14 @@ namespace GrassRandoV2.IC
                     [CmiModSourceProperty] = nameof(GrassRandoV2)
                 }
             };
-            t.SetProperty(CmiPoolGroupProperty, poolGroup);
-            t.SetProperty(CmiPinSpriteProperty, pinSprite);
+            t.SetProperty(CmiPoolGroupProperty, poolGroup!);
+            t.SetProperty(CmiPinSpriteProperty, pinSprite!);
             return t;
         }
 
-        public static InteropTag CmiLocationTag(string poolGroup = null, ISprite pinSprite = null,
-            IEnumerable<string> sceneNames = null, IEnumerable<string> titledAreas = null, IEnumerable<string> mapAreas = null,
-            string[] highlightScenes = null, (string, float, float)[] mapLocations = null, bool? noPin = null, int? pinSort = null)
+        public static InteropTag CmiLocationTag(string? poolGroup = null, ISprite? pinSprite = null,
+            IEnumerable<string>? sceneNames = null, IEnumerable<string>? titledAreas = null, IEnumerable<string>? mapAreas = null,
+            string[]? highlightScenes = null, (string, float, float)[]? mapLocations = null, bool? noPin = null, int? pinSort = null)
         {
             InteropTag t = CmiSharedTag(poolGroup: poolGroup, pinSprite: pinSprite);
             t.SetProperty(CmiSceneNamesProperty, sceneNames);
@@ -59,7 +59,7 @@ namespace GrassRandoV2.IC
             return t;
         }
 
-        public static InteropTag RecentItemsSharedTag(string messageOverride = null)
+        public static InteropTag RecentItemsSharedTag(string? messageOverride = null)
         {
             InteropTag t = new()
             {
@@ -69,7 +69,7 @@ namespace GrassRandoV2.IC
             return t;
         }
 
-        public static InteropTag RecentItemsLocationTag(string messageOverride = null, string sourceOverride = null,
+        public static InteropTag RecentItemsLocationTag(string? messageOverride = null, string? sourceOverride = null,
             bool? ignore = null)
         {
             InteropTag t = RecentItemsSharedTag(messageOverride: messageOverride);

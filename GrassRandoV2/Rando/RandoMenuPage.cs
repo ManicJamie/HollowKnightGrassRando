@@ -22,13 +22,13 @@ namespace GrassRandoV2.Rando
 
         public static void Hook()
         {
-            RandomizerMenuAPI.AddMenuPage((MenuPage lp) => Instance = new(lp), TryGetMenuButton);
+            RandomizerMenuAPI.AddMenuPage((MenuPage lp) => Instance = new(lp), HandleTopLevelButton);
             MenuChangerMod.OnExitMainMenu += () => Instance = null;
         }
 
-        private static bool TryGetMenuButton(MenuPage landingPage, out SmallButton button)
+        private static bool HandleTopLevelButton(MenuPage landingPage, out SmallButton button)
         {
-            button = Instance.EntryButton;
+            button = Instance!.EntryButton;
             return true;
         }
 
@@ -40,18 +40,24 @@ namespace GrassRandoV2.Rando
             }
         }
 
-        public void PasteSettings(ConnectionSettings settings)
+        public void PasteSettings()
         {
+            var settings = GrassRandoV2Mod.Instance.settings;
+            GrassRandoV2Mod.Instance.Log($"Pasting settings {GrassRandoV2Mod.Instance.settings}");
             ElementFactory.SetMenuValues(GrassRandoV2Mod.Instance.settings);
         }
 
         private RandoMenuPage(MenuPage lp)
         {
+            // Set up page & set buttons on show
             Page = new MenuPage("Grass Randomizer", lp);
-            ElementFactory = new(Page, GrassRandoV2Mod.Instance.settings);
+            // Page.BeforeShow += PasteSettings;
+            lp.BeforeShow += SetTopLevelButtonColor;
+            // Create entry button
             EntryButton = new(lp, Localize("Grass Randomizer"));
             EntryButton.AddHideAndShowEvent(lp, Page);
-            lp.BeforeShow += SetTopLevelButtonColor;
+
+            ElementFactory = new(Page, GrassRandoV2Mod.Instance.settings);
 
             IMenuElement[] topBarContents = new IMenuElement[]
             {
@@ -62,6 +68,7 @@ namespace GrassRandoV2.Rando
             IMenuElement[] includesBarContents = new IMenuElement[]
             {
                 ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.IncludeDreams)],
+                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.GrassShop)],
 
             };
 
