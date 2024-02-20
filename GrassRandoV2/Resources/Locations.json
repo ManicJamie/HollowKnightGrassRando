@@ -10101,7 +10101,12 @@
         "sceneName": "Deepnest_East_17",
         "objectName": "ash_grass_01",
         "x": 12.5320053,
-        "y": 264.5804
+        "y": 264.5804,
+        "mapSceneOverride": {
+            "Item1": "Deepnest_East_14",
+            "Item2": 160,
+            "Item3": -21
+        }
     },
     {
         "locationName": "Grass-Edge_420_Geo_Rock-1",
@@ -10113,7 +10118,12 @@
         "sceneName": "Deepnest_East_17",
         "objectName": "ash_grass_02",
         "x": 21.63,
-        "y": 276.841034
+        "y": 276.841034,
+        "mapSceneOverride": {
+            "Item1": "Deepnest_East_14",
+            "Item2": 160,
+            "Item3": -21
+        }
     },
     {
         "locationName": "Grass-Edge_420_Geo_Rock-2",
@@ -10125,7 +10135,12 @@
         "sceneName": "Deepnest_East_17",
         "objectName": "ash_grass_03",
         "x": 8.46,
-        "y": 276.4
+        "y": 276.4,
+        "mapSceneOverride": {
+            "Item1": "Deepnest_East_14",
+            "Item2": 160,
+            "Item3": -21
+        }
     },
     {
         "locationName": "Grass-Edge_Outside_Markoth-0",
@@ -10737,7 +10752,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2",
         "x": 148.0,
-        "y": 45.53
+        "y": 45.53,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-1",
@@ -10749,7 +10769,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (2)",
         "x": 119.66,
-        "y": 26.96
+        "y": 26.96,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-2",
@@ -10761,7 +10786,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (1)",
         "x": 116.65,
-        "y": 27.49
+        "y": 27.49,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-3",
@@ -10773,7 +10803,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (10)",
         "x": 38.12,
-        "y": 9.11
+        "y": 9.11,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-4",
@@ -10785,7 +10820,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (11)",
         "x": 21.89,
-        "y": 32.16
+        "y": 32.16,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-5",
@@ -10797,7 +10837,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (12)",
         "x": 94.92,
-        "y": 27.28
+        "y": 27.28,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-6",
@@ -10809,7 +10854,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (3)",
         "x": 96.36,
-        "y": 27.17
+        "y": 27.17,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-7",
@@ -10821,7 +10871,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (4)",
         "x": 102.33,
-        "y": 7.36
+        "y": 7.36,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-8",
@@ -10833,7 +10888,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (6)",
         "x": 79.83,
-        "y": 3.25
+        "y": 3.25,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-9",
@@ -10845,7 +10905,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (5)",
         "x": 87.6,
-        "y": 3.3
+        "y": 3.3,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-10",
@@ -10857,7 +10922,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (7)",
         "x": 80.4,
-        "y": 3.29
+        "y": 3.29,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-11",
@@ -10869,7 +10939,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (8)",
         "x": 58.74,
-        "y": 3.29
+        "y": 3.29,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-12",
@@ -10881,7 +10956,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_2 (9)",
         "x": 53.07,
-        "y": 3.18
+        "y": 3.18,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-13",
@@ -10893,7 +10973,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_1",
         "x": 141.51,
-        "y": 45.4
+        "y": 45.4,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-14",
@@ -10905,7 +10990,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3",
         "x": 118.19278,
-        "y": 27.67216
+        "y": 27.67216,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-15",
@@ -10917,7 +11007,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (2)",
         "x": 86.21,
-        "y": 3.4
+        "y": 3.4,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-16",
@@ -10929,7 +11024,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (1)",
         "x": 103.84,
-        "y": 7.47
+        "y": 7.47,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-17",
@@ -10941,7 +11041,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (3)",
         "x": 78.85,
-        "y": 3.4
+        "y": 3.4,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-18",
@@ -10953,7 +11058,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (4)",
         "x": 56.73,
-        "y": 3.05
+        "y": 3.05,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-19",
@@ -10965,7 +11075,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (6)",
         "x": 39.22,
-        "y": 9.18
+        "y": 9.18,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-20",
@@ -10977,7 +11092,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (5)",
         "x": 59.47,
-        "y": 2.98
+        "y": 2.98,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-21",
@@ -10989,7 +11109,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (7)",
         "x": 23.59,
-        "y": 32.32
+        "y": 32.32,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Failed_Champion-22",
@@ -11001,7 +11126,12 @@
         "sceneName": "Dream_01_False_Knight",
         "objectName": "dream_grass_3 (8)",
         "x": 35.47,
-        "y": 27.28
+        "y": 27.28,
+        "mapSceneOverride": {
+            "Item1": "Crossroads_10",
+            "Item2": 37.4,
+            "Item3": 48.4
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-0",
@@ -11013,7 +11143,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_2",
         "x": 78.94,
-        "y": 13.22
+        "y": 13.22,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-1",
@@ -11025,7 +11160,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_2 (2)",
         "x": 57.23,
-        "y": 29.32
+        "y": 29.32,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-2",
@@ -11037,7 +11177,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_2 (1)",
         "x": 66.91,
-        "y": 29.38
+        "y": 29.38,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-3",
@@ -11049,7 +11194,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_2 (3)",
         "x": 48.51,
-        "y": 29.15
+        "y": 29.15,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-4",
@@ -11061,7 +11211,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_2 (4)",
         "x": 42.84,
-        "y": 29.15
+        "y": 29.15,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-5",
@@ -11073,7 +11228,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3",
         "x": 84.69,
-        "y": 13.48
+        "y": 13.48,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-6",
@@ -11085,7 +11245,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (14)",
         "x": 47.11,
-        "y": 29.03
+        "y": 29.03,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-7",
@@ -11097,7 +11262,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (15)",
         "x": 40.59,
-        "y": 29.25
+        "y": 29.25,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-8",
@@ -11109,7 +11279,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (10)",
         "x": 65.55,
-        "y": 29.35
+        "y": 29.35,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-9",
@@ -11121,7 +11296,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (11)",
         "x": 61.22,
-        "y": 29.35
+        "y": 29.35,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-10",
@@ -11133,7 +11313,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (12)",
         "x": 55.06,
-        "y": 29.35
+        "y": 29.35,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-11",
@@ -11145,7 +11330,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (13)",
         "x": 56.24,
-        "y": 29.05
+        "y": 29.05,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Soul_Tyrant-12",
@@ -11157,7 +11347,12 @@
         "sceneName": "Dream_02_Mage_Lord",
         "objectName": "dream_grass_3 (9)",
         "x": 68.34,
-        "y": 29.39
+        "y": 29.39,
+        "mapSceneOverride": {
+            "Item1": "Ruins1_24",
+            "Item2": 44.0,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-0",
@@ -11169,7 +11364,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_1",
         "x": 20.43,
-        "y": 46.28
+        "y": 46.28,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-1",
@@ -11181,7 +11381,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_1 (2)",
         "x": 66.36,
-        "y": 25.03
+        "y": 25.03,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-2",
@@ -11193,7 +11398,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_1 (3)",
         "x": 82.84,
-        "y": 24.67
+        "y": 24.67,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-3",
@@ -11205,7 +11415,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_3 (10)",
         "x": 16.35,
-        "y": 46.12
+        "y": 46.12,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-4",
@@ -11217,7 +11432,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_3 (6)",
         "x": 84.84,
-        "y": 24.89
+        "y": 24.89,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Outside_Shrine-5",
@@ -11229,7 +11449,12 @@
         "sceneName": "Dream_Backer_Shrine",
         "objectName": "dream_grass_3 (9)",
         "x": 14.08,
-        "y": 46.32
+        "y": 46.32,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_08",
+            "Item2": 142.2,
+            "Item3": 43.6
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-0",
@@ -11241,7 +11466,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_2",
         "x": 180.6,
-        "y": 38.45
+        "y": 38.45,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-1",
@@ -11253,7 +11483,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_2 (1)",
         "x": 48.44,
-        "y": 30.41
+        "y": 30.41,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-2",
@@ -11265,7 +11500,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1",
         "x": 52.28,
-        "y": 30.17
+        "y": 30.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-3",
@@ -11277,7 +11517,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (24)",
         "x": 276.63,
-        "y": 52.25
+        "y": 52.25,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-4",
@@ -11289,7 +11534,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (25)",
         "x": 274.88,
-        "y": 51.96
+        "y": 51.96,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-5",
@@ -11301,7 +11551,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (26)",
         "x": 275.8,
-        "y": 51.72
+        "y": 51.72,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-6",
@@ -11313,7 +11568,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (27)",
         "x": 254.44,
-        "y": 51.72
+        "y": 51.72,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-7",
@@ -11325,7 +11585,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (2)",
         "x": 106.53,
-        "y": 36.17
+        "y": 36.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-8",
@@ -11337,7 +11602,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (23)",
         "x": 255.43,
-        "y": 52.25
+        "y": 52.25,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-9",
@@ -11349,7 +11619,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (1)",
         "x": 59.48,
-        "y": 29.8
+        "y": 29.8,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-10",
@@ -11361,7 +11636,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (3)",
         "x": 113.92,
-        "y": 36.08
+        "y": 36.08,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-11",
@@ -11373,7 +11653,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (4)",
         "x": 159.12,
-        "y": 38.04
+        "y": 38.04,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-12",
@@ -11385,7 +11670,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (6)",
         "x": 182.45,
-        "y": 38.17
+        "y": 38.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-13",
@@ -11397,7 +11687,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (5)",
         "x": 166.29,
-        "y": 37.96
+        "y": 37.96,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-14",
@@ -11409,7 +11704,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_1 (7)",
         "x": 187.98,
-        "y": 38.17
+        "y": 38.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-15",
@@ -11421,7 +11721,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3",
         "x": 157.526352,
-        "y": 38.69
+        "y": 38.69,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-16",
@@ -11433,7 +11738,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (2)",
         "x": 170.34,
-        "y": 38.17
+        "y": 38.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-17",
@@ -11445,7 +11755,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (1)",
         "x": 171.91,
-        "y": 38.69
+        "y": 38.69,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-18",
@@ -11457,7 +11772,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (10)",
         "x": 50.58,
-        "y": 30.1
+        "y": 30.1,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-19",
@@ -11469,7 +11789,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (3)",
         "x": 164.58,
-        "y": 38.17
+        "y": 38.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-20",
@@ -11481,7 +11806,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (4)",
         "x": 183.23,
-        "y": 38.17
+        "y": 38.17,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-21",
@@ -11493,7 +11823,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (6)",
         "x": 112.14,
-        "y": 36.34
+        "y": 36.34,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-22",
@@ -11505,7 +11840,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (5)",
         "x": 188.78,
-        "y": 38.25
+        "y": 38.25,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-23",
@@ -11517,7 +11857,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (7)",
         "x": 108.21,
-        "y": 36.34
+        "y": 36.34,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-24",
@@ -11529,7 +11874,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (8)",
         "x": 109.13,
-        "y": 36.13
+        "y": 36.13,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Dream_Nail-25",
@@ -11541,7 +11891,12 @@
         "sceneName": "Dream_Nailcollection",
         "objectName": "dream_grass_3 (9)",
         "x": 58.37,
-        "y": 30.3
+        "y": 30.3,
+        "mapSceneOverride": {
+            "Item1": "RestingGrounds_04",
+            "Item2": 55.2,
+            "Item3": 30.2
+        }
     },
     {
         "locationName": "Grass-Fungal_Queen's_Stag-0",
@@ -30813,7 +31168,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass",
         "x": 12.66,
-        "y": 2.92
+        "y": 2.92,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-1",
@@ -30825,7 +31185,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (7)",
         "x": 10.52,
-        "y": 2.99
+        "y": 2.99,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-2",
@@ -30837,7 +31202,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (1)",
         "x": 13.52,
-        "y": 2.72
+        "y": 2.72,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-3",
@@ -30849,7 +31219,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (10)",
         "x": 14.93,
-        "y": 2.77
+        "y": 2.77,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-4",
@@ -30861,7 +31236,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (2)",
         "x": 25.11,
-        "y": 2.72
+        "y": 2.72,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-5",
@@ -30873,7 +31253,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (3)",
         "x": 21.55,
-        "y": 2.72
+        "y": 2.72,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-6",
@@ -30885,7 +31270,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (5)",
         "x": 6.39,
-        "y": 2.99
+        "y": 2.99,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-7",
@@ -30897,7 +31287,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "simple_grass (6)",
         "x": 4.05,
-        "y": 2.99
+        "y": 2.99,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-8",
@@ -30909,7 +31304,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "green_grass_1",
         "x": 10.49,
-        "y": 3.04
+        "y": 3.04,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-9",
@@ -30921,7 +31321,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "green_grass_1 (1)",
         "x": 22.14,
-        "y": 2.85
+        "y": 2.85,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-10",
@@ -30933,7 +31338,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "green_grass_3",
         "x": 8.15,
-        "y": 3.025064
+        "y": 3.025064,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-11",
@@ -30945,7 +31355,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "green_grass_3 (2)",
         "x": 25.24,
-        "y": 3.025064
+        "y": 3.025064,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Stone_Sanctuary_Mask_Shard-12",
@@ -30957,7 +31372,12 @@
         "sceneName": "Fungus1_36",
         "objectName": "green_grass_3 (1)",
         "x": 14.89,
-        "y": 3.025064
+        "y": 3.025064,
+        "mapSceneOverride": {
+            "Item1": "Fungus1_34",
+            "Item2": 136.4,
+            "Item3": 16.6
+        }
     },
     {
         "locationName": "Grass-Greenpath_Sanctuary_Bench-0",
@@ -35229,7 +35649,12 @@
         "sceneName": "GG_Broken_Vessel",
         "objectName": "black_grass1",
         "x": 21.0080929,
-        "y": 28.6327648
+        "y": 28.6327648,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 55,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Broken_Vessel-1",
@@ -35241,7 +35666,12 @@
         "sceneName": "GG_Broken_Vessel",
         "objectName": "black_grass2",
         "x": 34.91598,
-        "y": 28.45708
+        "y": 28.45708,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 55,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Broken_Vessel-2",
@@ -35253,7 +35683,12 @@
         "sceneName": "GG_Broken_Vessel",
         "objectName": "black_grass3",
         "x": 34.18027,
-        "y": 28.5453663
+        "y": 28.5453663,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 55,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Broken_Vessel-3",
@@ -35265,7 +35700,12 @@
         "sceneName": "GG_Broken_Vessel",
         "objectName": "black_grass4",
         "x": 27.39393,
-        "y": 27.88944
+        "y": 27.88944,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 55,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-0",
@@ -35277,7 +35717,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass",
         "x": 74.03817,
-        "y": 10.051158
+        "y": 10.051158,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-1",
@@ -35289,7 +35734,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (7)",
         "x": 63.95,
-        "y": 9.718842
+        "y": 9.718842,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-2",
@@ -35301,7 +35751,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (1)",
         "x": 74.11,
-        "y": 9.99
+        "y": 9.99,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-3",
@@ -35313,7 +35768,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (10)",
         "x": 57.369,
-        "y": 9.7103
+        "y": 9.7103,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-4",
@@ -35325,7 +35785,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (12)",
         "x": 58.161,
-        "y": 9.76
+        "y": 9.76,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-5",
@@ -35337,7 +35802,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (11)",
         "x": 53.35,
-        "y": 9.7103
+        "y": 9.7103,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-6",
@@ -35349,7 +35819,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (8)",
         "x": 58.6781731,
-        "y": 9.78
+        "y": 9.78,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-7",
@@ -35361,7 +35836,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (2)",
         "x": 79.31,
-        "y": 9.99
+        "y": 9.99,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-8",
@@ -35373,7 +35853,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (9)",
         "x": 62.18,
-        "y": 9.76
+        "y": 9.76,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-9",
@@ -35385,7 +35870,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (3)",
         "x": 83.57183,
-        "y": 9.99
+        "y": 9.99,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-10",
@@ -35397,7 +35887,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (4)",
         "x": 78.3,
-        "y": 10.051158
+        "y": 10.051158,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-11",
@@ -35409,7 +35904,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (5)",
         "x": 76.06,
-        "y": 9.78
+        "y": 9.78,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-12",
@@ -35421,7 +35921,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "simple_grass (6)",
         "x": 81.3318253,
-        "y": 9.718842
+        "y": 9.718842,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-13",
@@ -35433,7 +35938,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "green_grass_2",
         "x": 70.77064,
-        "y": 10.0384722
+        "y": 10.0384722,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-14",
@@ -35445,7 +35955,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "green_grass_1",
         "x": 60.4051056,
-        "y": 10.0384722
+        "y": 10.0384722,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-15",
@@ -35457,7 +35972,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "green_grass_3",
         "x": 55.3887,
-        "y": 9.96169
+        "y": 9.96169,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu-16",
@@ -35469,7 +35989,12 @@
         "sceneName": "GG_Ghost_Marmu",
         "objectName": "green_grass_3 (1)",
         "x": 76.2,
-        "y": 10.01
+        "y": 10.01,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 56,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-0",
@@ -35481,7 +36006,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass",
         "x": 74.03817,
-        "y": 10.051158
+        "y": 10.051158,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-1",
@@ -35493,7 +36023,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (7)",
         "x": 63.95,
-        "y": 9.718842
+        "y": 9.718842,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-2",
@@ -35505,7 +36040,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (1)",
         "x": 74.11,
-        "y": 9.99
+        "y": 9.99,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-3",
@@ -35517,7 +36057,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (10)",
         "x": 57.369,
-        "y": 9.7103
+        "y": 9.7103,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-4",
@@ -35529,7 +36074,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (12)",
         "x": 58.161,
-        "y": 9.76
+        "y": 9.76,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-5",
@@ -35541,7 +36091,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (8)",
         "x": 58.6781731,
-        "y": 9.78
+        "y": 9.78,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-6",
@@ -35553,7 +36108,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (2)",
         "x": 79.31,
-        "y": 9.99
+        "y": 9.99,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-7",
@@ -35565,7 +36125,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (9)",
         "x": 62.18,
-        "y": 9.76
+        "y": 9.76,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-8",
@@ -35577,7 +36142,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (4)",
         "x": 78.3,
-        "y": 10.051158
+        "y": 10.051158,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-9",
@@ -35589,7 +36159,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "simple_grass (5)",
         "x": 76.06,
-        "y": 9.78
+        "y": 9.78,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-10",
@@ -35601,7 +36176,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "green_grass_2",
         "x": 70.77064,
-        "y": 10.0384722
+        "y": 10.0384722,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-11",
@@ -35613,7 +36193,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "green_grass_1",
         "x": 60.4051056,
-        "y": 10.0384722
+        "y": 10.0384722,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Ghost_Marmu_V-12",
@@ -35625,7 +36210,12 @@
         "sceneName": "GG_Ghost_Marmu_V",
         "objectName": "green_grass_3 (1)",
         "x": 76.2,
-        "y": 10.01
+        "y": 10.01,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 57,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Hornet_2-0",
@@ -35637,7 +36227,12 @@
         "sceneName": "GG_Hornet_2",
         "objectName": "ash_grass_01_windy",
         "x": 18.96,
-        "y": 28.553091
+        "y": 28.553091,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 58,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Hornet_2-1",
@@ -35649,7 +36244,12 @@
         "sceneName": "GG_Hornet_2",
         "objectName": "ash_grass_01_windy (1)",
         "x": 36.36,
-        "y": 28.553091
+        "y": 28.553091,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 58,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Hornet_2-2",
@@ -35661,7 +36261,12 @@
         "sceneName": "GG_Hornet_2",
         "objectName": "ash_grass_02_windy",
         "x": 22.3145866,
-        "y": 28.7
+        "y": 28.7,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 58,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Lost_Kin-0",
@@ -35673,7 +36278,12 @@
         "sceneName": "GG_Lost_Kin",
         "objectName": "black_grass1",
         "x": 19.93,
-        "y": 28.5674515
+        "y": 28.5674515,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 59,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Lost_Kin-1",
@@ -35685,7 +36295,12 @@
         "sceneName": "GG_Lost_Kin",
         "objectName": "black_grass3",
         "x": 17.6181355,
-        "y": 28.5489044
+        "y": 28.5489044,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 59,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Lost_Kin-2",
@@ -35697,7 +36312,12 @@
         "sceneName": "GG_Lost_Kin",
         "objectName": "black_grass4",
         "x": 31.94,
-        "y": 28.13
+        "y": 28.13,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 59,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-0",
@@ -35709,7 +36329,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass",
         "x": 41.3882446,
-        "y": 6.975452
+        "y": 6.975452,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-1",
@@ -35721,7 +36346,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (7)",
         "x": 60.6,
-        "y": 6.91
+        "y": 6.91,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-2",
@@ -35733,7 +36363,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (1)",
         "x": 42.07,
-        "y": 6.9
+        "y": 6.9,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-3",
@@ -35745,7 +36380,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (8)",
         "x": 62.64,
-        "y": 6.84
+        "y": 6.84,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-4",
@@ -35757,7 +36397,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (2)",
         "x": 36.44,
-        "y": 6.95
+        "y": 6.95,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-5",
@@ -35769,7 +36414,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (9)",
         "x": 67.11,
-        "y": 6.84
+        "y": 6.84,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-6",
@@ -35781,7 +36431,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (3)",
         "x": 35.9,
-        "y": 6.82
+        "y": 6.82,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-7",
@@ -35793,7 +36448,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (4)",
         "x": 33.13,
-        "y": 6.76
+        "y": 6.76,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-8",
@@ -35805,7 +36465,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (5)",
         "x": 45.75,
-        "y": 6.94
+        "y": 6.94,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-9",
@@ -35817,7 +36482,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "Simple Grass (6)",
         "x": 59.02,
-        "y": 6.94
+        "y": 6.94,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-10",
@@ -35829,7 +36499,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "green_grass_2",
         "x": 33.92,
-        "y": 7.07
+        "y": 7.07,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-11",
@@ -35841,7 +36516,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "green_grass_1",
         "x": 30.9455719,
-        "y": 7.00596237
+        "y": 7.00596237,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-12",
@@ -35853,7 +36533,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "green_grass_1 (1)",
         "x": 66.07,
-        "y": 7.00596237
+        "y": 7.00596237,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-13",
@@ -35865,7 +36550,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "green_grass_3",
         "x": 56.8,
-        "y": 7.01533461
+        "y": 7.01533461,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Mega_Moss_Charger-14",
@@ -35877,7 +36567,12 @@
         "sceneName": "GG_Mega_Moss_Charger",
         "objectName": "green_grass_3 (1)",
         "x": 63.6,
-        "y": 7.09
+        "y": 7.09,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 60,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-0",
@@ -35889,7 +36584,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "Simple Grass",
         "x": 28.036972,
-        "y": 28.9961376
+        "y": 28.9961376,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-1",
@@ -35901,7 +36601,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "Simple Grass (1)",
         "x": 27.1,
-        "y": 29.13
+        "y": 29.13,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-2",
@@ -35913,7 +36618,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "Simple Grass (2)",
         "x": 24.08,
-        "y": 29.13
+        "y": 29.13,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-3",
@@ -35925,7 +36635,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "Simple Grass (3)",
         "x": 21.26,
-        "y": 28.84
+        "y": 28.84,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-4",
@@ -35937,7 +36652,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "Simple Grass (4)",
         "x": 24.23,
-        "y": 28.95
+        "y": 28.95,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-5",
@@ -35949,7 +36669,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "green_grass_2",
         "x": 29.3206844,
-        "y": 28.9654
+        "y": 28.9654,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-6",
@@ -35961,7 +36686,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "green_grass_1",
         "x": 22.7682838,
-        "y": 29.19386
+        "y": 29.19386,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-GG_Traitor_Lord-7",
@@ -35973,7 +36703,12 @@
         "sceneName": "GG_Traitor_Lord",
         "objectName": "green_grass_3",
         "x": 25.7732067,
-        "y": 29.0292053
+        "y": 29.0292053,
+        "mapSceneOverride": {
+            "Item1": "GG_Waterways",
+            "Item2": 61,
+            "Item3": 44.7
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-0",
@@ -35985,7 +36720,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (12)",
         "x": 40.41,
-        "y": 10.02
+        "y": 10.02,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-1",
@@ -35997,7 +36737,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (13)",
         "x": 40.49,
-        "y": 9.77
+        "y": 9.77,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-2",
@@ -36009,7 +36754,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (14)",
         "x": 44.26,
-        "y": 9.58
+        "y": 9.58,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-3",
@@ -36021,7 +36771,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (15)",
         "x": 44.18,
-        "y": 9.83
+        "y": 9.83,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-4",
@@ -36033,7 +36788,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (22)",
         "x": 91.63,
-        "y": 29.78
+        "y": 29.78,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-5",
@@ -36045,7 +36805,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (21)",
         "x": 55.91,
-        "y": 9.72
+        "y": 9.72,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-6",
@@ -36057,7 +36822,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (23)",
         "x": 91.55,
-        "y": 30.03
+        "y": 30.03,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-7",
@@ -36069,7 +36839,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (24)",
         "x": 93.69,
-        "y": 30.11
+        "y": 30.11,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-8",
@@ -36081,7 +36856,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (26)",
         "x": 121.29,
-        "y": 29.6
+        "y": 29.6,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-9",
@@ -36093,7 +36873,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (25)",
         "x": 93.77,
-        "y": 29.86
+        "y": 29.86,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-10",
@@ -36105,7 +36890,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (27)",
         "x": 121.21,
-        "y": 29.85
+        "y": 29.85,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-11",
@@ -36117,7 +36907,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (28)",
         "x": 124.28,
-        "y": 29.85
+        "y": 29.85,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-12",
@@ -36129,7 +36924,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (29)",
         "x": 124.36,
-        "y": 29.6
+        "y": 29.6,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-13",
@@ -36141,7 +36941,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (32)",
         "x": 120.37,
-        "y": 29.83
+        "y": 29.83,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-14",
@@ -36153,7 +36958,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (33)",
         "x": 120.45,
-        "y": 29.58
+        "y": 29.58,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-15",
@@ -36165,7 +36975,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (34)",
         "x": 129.04,
-        "y": 8.58
+        "y": 8.58,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-16",
@@ -36177,7 +36992,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (35)",
         "x": 128.96,
-        "y": 8.83
+        "y": 8.83,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-17",
@@ -36189,7 +37009,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (38)",
         "x": 123.88,
-        "y": 8.58
+        "y": 8.58,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-18",
@@ -36201,7 +37026,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (39)",
         "x": 131.15,
-        "y": 8.7075
+        "y": 8.7075,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-19",
@@ -36213,7 +37043,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (40)",
         "x": 145.83,
-        "y": 8.75
+        "y": 8.75,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-20",
@@ -36225,7 +37060,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (42)",
         "x": 125.62,
-        "y": 8.57
+        "y": 8.57,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-21",
@@ -36237,7 +37077,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (41)",
         "x": 145.91,
-        "y": 8.52
+        "y": 8.52,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-22",
@@ -36249,7 +37094,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "simple_grass (43)",
         "x": 125.54,
-        "y": 8.8
+        "y": 8.8,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-23",
@@ -36261,7 +37111,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "green_grass_2 (2)",
         "x": 55.15,
-        "y": 10.14
+        "y": 10.14,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-24",
@@ -36273,7 +37128,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "green_grass_2 (1)",
         "x": 127.56,
-        "y": 8.86
+        "y": 8.86,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Fog_Overgrown_Mound-25",
@@ -36285,7 +37145,12 @@
         "sceneName": "Room_Fungus_Shaman",
         "objectName": "green_grass_2 (3)",
         "x": 125.4,
-        "y": 30.18
+        "y": 30.18,
+        "mapSceneOverride": {
+            "Item1": "Fungus3_44",
+            "Item2": 0,
+            "Item3": 44
+        }
     },
     {
         "locationName": "Grass-Dirtmouth_Stag-0",
@@ -36297,7 +37162,12 @@
         "sceneName": "Room_Town_Stag_Station",
         "objectName": "white_grass8",
         "x": 30.5492039,
-        "y": 5.828376
+        "y": 5.828376,
+        "mapSceneOverride": {
+            "Item1": "Town",
+            "Item2": 132,
+            "Item3": 29
+        }
     },
     {
         "locationName": "Grass-Dirtmouth_Stag-1",
@@ -36309,7 +37179,12 @@
         "sceneName": "Room_Town_Stag_Station",
         "objectName": "white_grass2",
         "x": 45.11,
-        "y": 5.22
+        "y": 5.22,
+        "mapSceneOverride": {
+            "Item1": "Town",
+            "Item2": 132,
+            "Item3": 29
+        }
     },
     {
         "locationName": "Grass-Dirtmouth_Stag-2",
@@ -36321,7 +37196,12 @@
         "sceneName": "Room_Town_Stag_Station",
         "objectName": "white_grass6",
         "x": 29.5371742,
-        "y": 6.131212
+        "y": 6.131212,
+        "mapSceneOverride": {
+            "Item1": "Town",
+            "Item2": 132,
+            "Item3": 29
+        }
     },
     {
         "locationName": "Grass-King's_Pass-0",

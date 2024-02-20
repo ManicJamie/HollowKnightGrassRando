@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.IC.Costs
+namespace GrassRando.IC.Costs
 {
     // From MoreLocations under MIT; https://github.com/BadMagic100/MoreLocations/blob/c4e59aac16ab2b7f2f311ca6e42b84e020e7756c/MoreLocations/ItemChanger/CostIconSupport/IMixedCostSupport.cs
     public interface IMixedCostSupport

@@ -3,7 +3,7 @@ using UnityEngine;
 using ItemChanger;
 using ItemChanger.Internal;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     [Serializable]
     public class GrassSprite : ISprite

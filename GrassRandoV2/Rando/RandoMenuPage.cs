@@ -5,9 +5,9 @@ using MenuChanger.Extensions;
 using static RandomizerMod.Localization;
 using RandomizerMod.Menu;
 using System.Collections.Generic;
-using GrassRandoV2.Settings;
+using GrassRando.Settings;
 
-namespace GrassRandoV2.Rando
+namespace GrassRando.Rando
 {
 
     public class RandoMenuPage
@@ -36,15 +36,14 @@ namespace GrassRandoV2.Rando
         {
             if (EntryButton != null)
             {
-                EntryButton.Text.color = GrassRandoV2Mod.Instance.settings.Enabled ? Colors.TRUE_COLOR : Colors.DEFAULT_COLOR;
+                EntryButton.Text.color = GrassRandoMod.Instance.settings.Enabled ? Colors.TRUE_COLOR : Colors.DEFAULT_COLOR;
             }
         }
 
         public void PasteSettings()
         {
-            var settings = GrassRandoV2Mod.Instance.settings;
-            GrassRandoV2Mod.Instance.Log($"Pasting settings {GrassRandoV2Mod.Instance.settings}");
-            ElementFactory.SetMenuValues(GrassRandoV2Mod.Instance.settings);
+            ElementFactory.SetMenuValues(GrassRandoMod.Instance.settings);
+            SetTopLevelButtonColor();
         }
 
         private RandoMenuPage(MenuPage lp)
@@ -57,38 +56,38 @@ namespace GrassRandoV2.Rando
             EntryButton = new(lp, Localize("Grass Randomizer"));
             EntryButton.AddHideAndShowEvent(lp, Page);
 
-            ElementFactory = new(Page, GrassRandoV2Mod.Instance.settings);
+            ElementFactory = new(Page, GrassRandoMod.Instance.settings);
 
             IMenuElement[] topBarContents = new IMenuElement[]
             {
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Enabled)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.DisplayItems)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Enabled)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.DisplayItems)],
             };
 
             IMenuElement[] includesBarContents = new IMenuElement[]
             {
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.IncludeDreams)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.GrassShop)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.IncludeDreams)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.GrassShop)],
 
             };
 
             IMenuElement[] areasBarContents = new IMenuElement[]
             {
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Kings_Pass)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Dirtmouth)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Crossroads)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Greenpath)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Fungal)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Fog_Canyon)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Gardens)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Grounds)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.City)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Edge)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Deepnest)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Basin)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Abyss)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Palace)],
-                ElementFactory.ElementLookup[nameof(GrassRandoV2Mod.Instance.settings.Godhome)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Kings_Pass)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Dirtmouth)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Crossroads)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Greenpath)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Fungal)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Fog_Canyon)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Gardens)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Grounds)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.City)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Edge)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Deepnest)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Basin)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Abyss)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Palace)],
+                ElementFactory.ElementLookup[nameof(GrassRandoMod.Instance.settings.Godhome)],
             };
 
             GridItemPanel MainPanel = new(Page, new(0, 300), 2, SpaceParameters.VSPACE_SMALL, SpaceParameters.HSPACE_SMALL, false, topBarContents);

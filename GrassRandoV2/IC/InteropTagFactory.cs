@@ -2,7 +2,7 @@
 using ItemChanger.Tags;
 using System.Collections.Generic;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public static class InteropTagFactory
     {
@@ -36,7 +36,7 @@ namespace GrassRandoV2.IC
                 Message = "RandoSupplementalMetadata",
                 Properties =
                 {
-                    [CmiModSourceProperty] = nameof(GrassRandoV2)
+                    [CmiModSourceProperty] = nameof(GrassRando)
                 }
             };
             t.SetProperty(CmiPoolGroupProperty, poolGroup!);

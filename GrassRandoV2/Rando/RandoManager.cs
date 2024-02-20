@@ -12,14 +12,14 @@ using RandomizerMod.RC;
 using RandomizerMod.Settings;
 using ItemChanger;
 using RandomizerCore;
-using GrassRandoV2.IC;
-using GrassRandoV2.Data;
+using GrassRando.IC;
+using GrassRando.Data;
 using ItemChanger.Locations;
-using GrassRandoV2.Rando.Costs;
-using GrassRandoV2.IC.Costs;
+using GrassRando.Rando.Costs;
+using GrassRando.IC.Costs;
 using RandomizerMod.IC;
 
-namespace GrassRandoV2.Rando
+namespace GrassRando.Rando
 {
     internal static class RandoManager
     {
@@ -61,7 +61,7 @@ namespace GrassRandoV2.Rando
 
         public static void SetupGrassShopRefs(RequestBuilder rb)
         {
-            if (!GrassRandoV2Mod.Instance.settings.Enabled) return;
+            if (!GrassRandoMod.Instance.settings.Enabled) return;
 
             rb.EditLocationRequest("Grass_Shop", info =>
             {
@@ -77,7 +77,7 @@ namespace GrassRandoV2.Rando
 
         public static void RegisterItemsLogic(GenerationSettings gs, LogicManagerBuilder lmb)
         {
-            if (!GrassRandoV2Mod.Instance.settings.Enabled) { return; }
+            if (!GrassRandoMod.Instance.settings.Enabled) { return; }
 
             Term term = lmb.GetOrAddTerm("GRASS", TermType.Int);
             TermValue tv = new(term, 1);
@@ -88,9 +88,9 @@ namespace GrassRandoV2.Rando
 
         public static void RegisterLocationsLogic(GenerationSettings gs, LogicManagerBuilder lmb)
         {
-            if (!GrassRandoV2Mod.Instance.settings.Enabled) { return; }
+            if (!GrassRandoMod.Instance.settings.Enabled) { return; }
 
-            var connectionSettings = GrassRandoV2Mod.Instance.settings;
+            var connectionSettings = GrassRandoMod.Instance.settings;
             var includedLocations = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes);
             foreach (var loc in includedLocations)
             {
@@ -110,7 +110,7 @@ namespace GrassRandoV2.Rando
             };
             */
 
-            if (!GrassRandoV2Mod.Instance.settings.Enabled) return;
+            if (!GrassRandoMod.Instance.settings.Enabled) return;
 
             rb.EditLocationRequest("Grass_Shop", info =>
             {
@@ -146,9 +146,9 @@ namespace GrassRandoV2.Rando
 
         public static void BuildRequest(RequestBuilder rb)
         {
-            if (!GrassRandoV2Mod.Instance.settings.Enabled) { return; }
+            if (!GrassRandoMod.Instance.settings.Enabled) { return; }
 
-            var connectionSettings = GrassRandoV2Mod.Instance.settings;
+            var connectionSettings = GrassRandoMod.Instance.settings;
             var includedLocations = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes);
             foreach (var loc in includedLocations)
             {
@@ -165,7 +165,7 @@ namespace GrassRandoV2.Rando
         public static void LogRandoSettings(LogArguments args, TextWriter w)
         {
             w.WriteLine("Logging RopeRando settings:");
-            w.WriteLine(RandomizerMod.RandomizerData.JsonUtil.Serialize(GrassRandoV2Mod.Instance.settings));
+            w.WriteLine(RandomizerMod.RandomizerData.JsonUtil.Serialize(GrassRandoMod.Instance.settings));
         }
     }
 }

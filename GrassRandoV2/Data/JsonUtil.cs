@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GrassCore;
 
-namespace GrassRandoV2.Data
+namespace GrassRando.Data
 {
     internal static class JsonUtil
     {

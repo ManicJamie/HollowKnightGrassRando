@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.Data
+namespace GrassRando.Data
 { 
     /// <summary>
     /// GrassData object as deserialised from the json
@@ -24,7 +24,12 @@ namespace GrassRandoV2.Data
         [JsonProperty]
         public string logic = "";
         [JsonProperty]
-        public int id; // uniquely identifies grass per-scene without referencing position or objectName, neither of which are human-readable as keys. //TODO: is this required?
+        public int id; // uniquely identifies grass per-scene without referencing position or objectName, neither of which are human-readable as keys.
+        /// <summary>
+        /// Used instead of the GrassKey for defining worldMapPosition. Used to fake pin locations to better positions in RandoMapMod.
+        /// </summary>
+        [JsonProperty]
+        public (string, float, float)? mapSceneOverride;
 
         [JsonIgnore] // Constructed below
         internal GrassKey key;

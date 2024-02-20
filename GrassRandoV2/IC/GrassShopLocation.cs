@@ -1,5 +1,5 @@
-﻿using GrassRandoV2.IC.Costs;
-using GrassRandoV2.IC.Modules;
+﻿using GrassRando.IC.Costs;
+using GrassRando.IC.Modules;
 using ItemChanger;
 using ItemChanger.Locations;
 using Modding;
@@ -11,13 +11,12 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public class GrassShopLocation : CustomShopLocation
     {
         public GrassShopLocation()
         {
-            
             dungDiscount = false;
             flingType = FlingType.DirectDeposit;
             costDisplayerSelectionStrategy = new MixedCostDisplayerSelectionStrategy()

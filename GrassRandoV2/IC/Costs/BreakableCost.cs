@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.IC.Costs
+namespace GrassRando.IC.Costs
 {
     public enum BreakableType
     {
@@ -15,7 +15,7 @@ namespace GrassRandoV2.IC.Costs
 
     public sealed record BreakableCost(int amount, BreakableType type, ComparisonOperator op = ComparisonOperator.Ge) : Cost
     {
-        public override bool CanPay() => GrassRandoV2Mod.Instance.saveData.grassCount.Compare(op, amount);
+        public override bool CanPay() => GrassRandoMod.Instance.saveData.grassCount.Compare(op, amount);
         public override void OnPay() { }
         public override bool HasPayEffects() => false;
         public override bool Includes(Cost c)

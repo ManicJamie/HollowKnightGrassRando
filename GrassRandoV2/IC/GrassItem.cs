@@ -1,13 +1,13 @@
 ﻿using ItemChanger;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public class GrassItem : AbstractItem
     {
         public override void GiveImmediate(GiveInfo info)
         {
-            GrassRandoV2Mod.Instance.saveData.grassCount++;
-            GrassRandoV2Mod.Instance.LogDebug($"New grass count: {GrassRandoV2Mod.Instance.saveData.grassCount}");
+            GrassRandoMod.Instance.saveData.grassCount++;
+            GrassRandoMod.Instance.LogDebug($"New grass count: {GrassRandoMod.Instance.saveData.grassCount}");
         }
     }
 }

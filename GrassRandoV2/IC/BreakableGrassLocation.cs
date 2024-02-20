@@ -7,10 +7,10 @@ using Modding;
 using GrassCore;
 using System.Linq;
 using Newtonsoft.Json;
-using GrassRandoV2.Data;
-using GrassRandoV2.IC.Modules;
+using GrassRando.Data;
+using GrassRando.IC.Modules;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public class BreakableGrassLocation : AutoLocation
     {
@@ -39,7 +39,7 @@ namespace GrassRandoV2.IC
         {
             if (!Placement.AllObtained())
             {
-                MessageType mt = GrassRandoV2Mod.Instance.settings.DisplayItems ? MessageType.Corner : MessageType.None;
+                MessageType mt = GrassRandoMod.Instance.settings.DisplayItems ? MessageType.Corner : MessageType.None;
                 Placement.GiveAll(new GiveInfo() { FlingType = FlingType.DirectDeposit, MessageType = mt });
             } else
             {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public class LocationRegistrar
     {
@@ -95,7 +95,6 @@ namespace GrassRandoV2.IC
         private void GrassCutHandler(GrassKey key)
         {
             var location = GetLocation(key);
-            GrassRandoV2Mod.Instance.LogDebug($"{key} - location {location?.name}");
             if (location == null) { return; }
 
             location.Obtain();

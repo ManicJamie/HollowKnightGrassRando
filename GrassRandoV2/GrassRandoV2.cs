@@ -1,21 +1,21 @@
 using Modding;
 using System;
 using System.Collections.Generic;
-using GrassRandoV2.IC;
-using GrassRandoV2.Rando;
+using GrassRando.IC;
+using GrassRando.Rando;
 using RandoSettingsManager;
 using RandoSettingsManager.SettingsManagement;
 using System.Reflection;
 using GrassCore;
-using GrassRandoV2.Data;
-using GrassRandoV2.Settings;
+using GrassRando.Data;
+using GrassRando.Settings;
 
-namespace GrassRandoV2
+namespace GrassRando
 {
-    public class GrassRandoV2Mod : Mod, ILocalSettings<SaveData>, IGlobalSettings<ConnectionSettings>
+    public class GrassRandoMod : Mod, ILocalSettings<SaveData>, IGlobalSettings<ConnectionSettings>
     {
-        private static GrassRandoV2Mod? _instance;
-        public static GrassRandoV2Mod Instance { get { _instance ??= new GrassRandoV2Mod(); return _instance; } }
+        private static GrassRandoMod? _instance;
+        public static GrassRandoMod Instance { get { _instance ??= new GrassRandoMod(); return _instance; } }
 
         public SaveData saveData = new();
 
@@ -25,9 +25,9 @@ namespace GrassRandoV2
 
         //sets up the ui mod stuff for the mod manager
         new public string GetName() => "Grass Randomizer";
-        public override string GetVersion() => "v1.1";
+        public override string GetVersion() => GetType().Assembly.GetName().Version.ToString();
 
-        public GrassRandoV2Mod() : base("GrassRando")
+        public GrassRandoMod() : base("GrassRando")
         {
         }
 
@@ -56,7 +56,7 @@ namespace GrassRandoV2
             RandoSettingsManagerMod.Instance.RegisterConnection(new SimpleSettingsProxy<ConnectionSettings>(
                 this,
                 (st) => {
-                    if (st == null) 
+                    if (st is null) 
                     {
                         settings.Enabled = false;
                     }
@@ -64,8 +64,11 @@ namespace GrassRandoV2
                     {
                         settings = st;
                     }
+                    RandoMenuPage.Instance?.PasteSettings();
                 },
-                () => settings.Enabled ? settings : null
+                () => {
+                    return settings.Enabled ? settings : null;
+                }
             ));
         }
 

@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using GrassCore;
 
-namespace GrassRandoV2.IC.Modules
+namespace GrassRando.IC.Modules
 {
     /// <summary>
     /// Removes grass on scene load as long as the placement has no items left to give.
@@ -40,7 +40,7 @@ namespace GrassRandoV2.IC.Modules
                 }
                 else
                 {
-                    GrassRandoV2Mod.Instance.LogWarn($"RemoveGrassModule: Attempted to remove {loc.name} but key {loc.key} not present in scene!");
+                    GrassRandoMod.Instance.LogWarn($"RemoveGrassModule: Attempted to remove {loc.name} but key {loc.key} not present in scene!");
                 }
             }
         }
@@ -53,7 +53,8 @@ namespace GrassRandoV2.IC.Modules
             {
                 if (GrassList.Contains(go))
                 {
-                    result.Add(new GrassKey(go), go);
+                    var key = new GrassKey(go);
+                    if (!result.ContainsKey(key)) result.Add(new GrassKey(go), go);
                 }
             }
 

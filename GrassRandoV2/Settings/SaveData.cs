@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.Settings
+namespace GrassRando.Settings
 {
     public class SaveData
     {

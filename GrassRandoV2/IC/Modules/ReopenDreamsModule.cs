@@ -15,7 +15,7 @@ using System.Collections;
 using System.Reflection.Emit;
 using Newtonsoft.Json;
 
-namespace GrassRandoV2.IC.Modules
+namespace GrassRando.IC.Modules
 {
     /// <summary>
     /// Keeps dream entry objects active if grass in the scene has not been obtained.
@@ -76,7 +76,7 @@ namespace GrassRandoV2.IC.Modules
             // Both the check we want (dream nail) and that we want to override (falseKnightDreamDefeated) share a state & hence both call the same events.
             // For some reason these are chained the silly way around, so instead we'll just replace them with a composite check action.
 
-            GrassRandoV2Mod.Instance.Log($"Editing fsm {fsm.FsmName} on scene {fsm.gameObject.scene.name}");
+            GrassRandoMod.Instance.Log($"Editing fsm {fsm.FsmName} on scene {fsm.gameObject.scene.name}");
             var dreamScene = sceneToDreamScene[fsm.gameObject.scene.name];
             var pdBool = sceneToPdBool[fsm.gameObject.scene.name];
 
@@ -100,7 +100,7 @@ namespace GrassRandoV2.IC.Modules
         /// </summary>
         private void EditDestructionFSM2(PlayMakerFSM fsm)
         {
-            GrassRandoV2Mod.Instance.Log($"Editing fsm {fsm.FsmName} on scene {fsm.gameObject.scene.name}");
+            GrassRandoMod.Instance.Log($"Editing fsm {fsm.FsmName} on scene {fsm.gameObject.scene.name}");
             var dreamScene = sceneToDreamScene[fsm.gameObject.scene.name];
             var pdBool = sceneToPdBool[fsm.gameObject.scene.name];
 

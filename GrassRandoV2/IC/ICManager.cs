@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GrassRandoV2.Data;
+using GrassRando.Data;
 using ItemChanger.UIDefs;
 using UnityEngine.XR;
 
-namespace GrassRandoV2.IC
+namespace GrassRando.IC
 {
     public static class ICManager
     {
@@ -101,7 +101,7 @@ namespace GrassRandoV2.IC
                             poolGroup: gd.GetGroupName(),
                             mapLocations: new (string, float, float)[]
                             {
-                                (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
+                                gd.mapSceneOverride ?? (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
                             }
                         ),
                     }

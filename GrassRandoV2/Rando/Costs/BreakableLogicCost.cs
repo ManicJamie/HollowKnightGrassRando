@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.Rando.Costs
+namespace GrassRando.Rando.Costs
 {
     public class BreakableLogicCost : LogicCost
     {

@@ -11,7 +11,7 @@ using UnityEngine;
 using ItemChanger.Extensions;
 using HutongGames.PlayMaker.Actions;
 
-namespace GrassRandoV2.IC.Modules
+namespace GrassRando.IC.Modules
 {
     /// <summary>
     /// Prevents Quirrel from leaving Unn's shrine so we can use him as a shop.
@@ -26,21 +26,18 @@ namespace GrassRandoV2.IC.Modules
         //TODO: Check IC for Grass Shop before hooking
         public override void Initialize()
         {
-            GrassRandoV2Mod.Instance.LogDebug("Loading KeepQuirrelAliveModule");
             Events.AddFsmEdit(new FsmID(goName, deactivate1), RemoveFSM);
             Events.AddFsmEdit(new FsmID(goName, deactivate2), RemoveFSM);
         }
 
         public override void Unload()
         {
-            GrassRandoV2Mod.Instance.LogDebug("Unloading KeepQuirrelAliveModule");
             Events.RemoveFsmEdit(new FsmID(goName, deactivate1), RemoveFSM);
             Events.RemoveFsmEdit(new FsmID(goName, deactivate2), RemoveFSM);
         }
 
         private void RemoveFSM(PlayMakerFSM fsm)
         {
-            GrassRandoV2Mod.Instance.LogDebug("Editing Quirrel death FSMs");
             var state = fsm.GetState("Destroy");
             state.RemoveFirstActionOfType<DestroySelf>();
             state.RemoveFirstActionOfType<ActivateGameObject>();

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.IC.Costs
+namespace GrassRando.IC.Costs
 {
     public class BreakableCostSupport : IMixedCostSupport
     {

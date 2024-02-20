@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrassRandoV2.IC.Costs
+namespace GrassRando.IC.Costs
 {
     // From MoreLocations under MIT; https://github.com/BadMagic100/MoreLocations/blob/master/MoreLocations/ItemChanger/MixedCostDisplayerSelectionStrategy.cs
     // Using this here since grass shop may want to contain multiple types of breakables later on, and using this makes that easy.
