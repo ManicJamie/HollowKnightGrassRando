@@ -15,11 +15,9 @@ namespace GrassRando
     public class GrassRandoMod : Mod, ILocalSettings<SaveData>, IGlobalSettings<ConnectionSettings>
     {
         private static GrassRandoMod? _instance;
-        public static GrassRandoMod Instance { get { _instance ??= new GrassRandoMod(); return _instance; } }
+        public static GrassRandoMod Instance { get { return _instance!; } }
 
         public SaveData saveData = new();
-
-        public readonly GrassRegister_Global grassRegister = new();
 
         public ConnectionSettings settings = new();
 
@@ -34,6 +32,7 @@ namespace GrassRando
         public override void Initialize()
         {
             Log("Initializing");
+            _instance = this;
 
             GrassCoreMod.Instance.CutsEnabled = true; // Get grass events from GrassCore
             // GrassCore contains WeedKiller, but its easier to just do it ourselves in a module.

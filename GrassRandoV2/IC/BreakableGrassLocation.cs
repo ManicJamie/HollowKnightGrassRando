@@ -41,9 +41,6 @@ namespace GrassRando.IC
             {
                 MessageType mt = GrassRandoMod.Instance.settings.DisplayItems ? MessageType.Corner : MessageType.None;
                 Placement.GiveAll(new GiveInfo() { FlingType = FlingType.DirectDeposit, MessageType = mt });
-            } else
-            {
-                //TODO: log?
             }
         }
     }

@@ -12,7 +12,9 @@ namespace GrassRando.IC
     public class LocationRegistrar
     {
         public Dictionary<string, Dictionary<GrassKey, BreakableGrassLocation>> GrassLocations = new();
-        // Maintained separately to allow quick access time
+
+        // Keep a living "hot dict" to reduce access time
+        public Dictionary<GrassKey, BreakableGrassLocation>? activeSceneGrassLocations = new();
 
         private static LocationRegistrar? _instance;
         public static LocationRegistrar Instance { get { _instance ??= new LocationRegistrar(); return _instance; }  }
@@ -20,6 +22,12 @@ namespace GrassRando.IC
         public LocationRegistrar()
         {
             GrassEventDispatcher.GrassWasCut += GrassCutHandler;
+            UnityEngine.SceneManagement.SceneManager.activeSceneChanged += SetActiveScene;
+        }
+
+        private void SetActiveScene(Scene source, Scene target)
+        {
+            if (!GrassLocations.TryGetValue(target.name, out activeSceneGrassLocations)) activeSceneGrassLocations = null;
         }
 
         public void Add(BreakableGrassLocation location)
@@ -37,7 +45,7 @@ namespace GrassRando.IC
         /// <summary>
         /// Retrieves a dictionary of GrassKey:GrassLocation for the current scene, or an empty dict if the scene has no locations.
         /// </summary>
-        public Dictionary<GrassKey, BreakableGrassLocation>? GetLocationsInScene(string sceneName)
+        public Dictionary<GrassKey, BreakableGrassLocation> GetLocationsInScene(string sceneName)
         {
             if (!GrassLocations.TryGetValue(sceneName, out var sceneDict)) { return new(); }
             return sceneDict;
@@ -92,9 +100,15 @@ namespace GrassRando.IC
             return location;
         }
 
+        private BreakableGrassLocation? GetLocalLocation(GrassKey key)
+        {
+            if (!(activeSceneGrassLocations?.TryGetValue(key, out BreakableGrassLocation location) ?? false)) { return null; }
+            return location;
+        }
+
         private void GrassCutHandler(GrassKey key)
         {
-            var location = GetLocation(key);
+            var location = GetLocalLocation(key);
             if (location == null) { return; }
 
             location.Obtain();

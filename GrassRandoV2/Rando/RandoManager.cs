@@ -90,9 +90,7 @@ namespace GrassRando.Rando
         {
             if (!GrassRandoMod.Instance.settings.Enabled) { return; }
 
-            var connectionSettings = GrassRandoMod.Instance.settings;
-            var includedLocations = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes);
-            foreach (var loc in includedLocations)
+            foreach (var loc in GrassDataRegister.gd)
             {
                 lmb.AddLogicDef(new(loc.locationName, loc.logic));
             }
@@ -152,9 +150,14 @@ namespace GrassRando.Rando
             var includedLocations = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes);
             foreach (var loc in includedLocations)
             {
-                rb.AddItemByName(ItemName);
-                rb.AddLocationByName(loc.locationName);
-                
+                if (connectionSettings.allowedAreas.HasFlag(loc.grassArea) && connectionSettings.allowedAreaTypes.HasFlag(loc.areaType))
+                {
+                    rb.AddItemByName(ItemName);
+                    rb.AddLocationByName(loc.locationName);
+                } else
+                {
+                    rb.AddToVanilla(ItemName, loc.locationName);
+                }
             }
             if (connectionSettings.GrassShop)
             {
