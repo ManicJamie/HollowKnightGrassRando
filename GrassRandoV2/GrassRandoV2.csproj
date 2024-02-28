@@ -6,11 +6,11 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyTitle>GrassRandoV2</AssemblyTitle>
     <Product>GrassRandoV2</Product>
-    <Description>A Hollow Knight mod that...</Description>
+    <Description>Randomizer 4 addon for grass</Description>
     <Copyright>Copyright © StormZillaa 2023</Copyright>
     <Authors>StormZillaa</Authors>
-    <NoWarn>7035</NoWarn>
-    <AssemblyVersion>0.1.*</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
     <Deterministic>false</Deterministic>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <LangVersion>latest</LangVersion>
