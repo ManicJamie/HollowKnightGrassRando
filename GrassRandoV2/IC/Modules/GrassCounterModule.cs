@@ -310,19 +310,22 @@ namespace GrassRandoV2.IC.Modules
             // The first component (the anchor) isn't created by us, and its
             // position is the center of itself (I think), so we use the
             // Renderer's bounds to get its leftmost edge.
+            //
+            // warn: will probably nre if someone removes the geo counter from our layout,
+            // but why the hell would someone do that?
             Transform anchorParentTransform =
-                _layout[0].GameObject_.transform.parent;
+                _layout[0].GameObject_!.transform.parent;
             float anchorLeft = anchorParentTransform.InverseTransformPoint(
-                _layout[0].GameObject_.GetComponent<Renderer>().bounds.min).x;
+                _layout[0].GameObject_!.GetComponent<Renderer>().bounds.min).x;
 
             float currentX = anchorLeft + _layout[0].GetComputedWidth();
             for (int i = 1; i < _layout.Count; ++i)
             {
-                Transform transform = _layout[i].GameObject_.transform;
+                Transform transform = _layout[i].GameObject_!.transform;
                 transform.localPosition = WithX(transform.localPosition,
                                                 currentX);
                 currentX += _layout[i].GetComputedWidth();
-                _layout[i].GameObject_.GetComponent<Renderer>().enabled = true;
+                _layout[i].GameObject_!.GetComponent<Renderer>().enabled = true;
             }
         }
 
