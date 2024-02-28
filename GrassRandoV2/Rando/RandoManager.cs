@@ -18,6 +18,7 @@ using ItemChanger.Locations;
 using GrassRando.Rando.Costs;
 using GrassRando.IC.Costs;
 using RandomizerMod.IC;
+using RandomizerCore.Json;
 
 namespace GrassRando.Rando
 {
@@ -30,8 +31,9 @@ namespace GrassRando.Rando
 
         public static void Hook()
         {
-            RCData.RuntimeLogicOverride.Subscribe(-1000f, RegisterItemsLogic);
-            RCData.RuntimeLogicOverride.Subscribe(-1000f, RegisterLocationsLogic);
+            RCData.RuntimeLogicOverride.Subscribe(-1000f, RegisterWaypointLogic);
+            RCData.RuntimeLogicOverride.Subscribe(-500f, RegisterItemsLogic);
+            RCData.RuntimeLogicOverride.Subscribe(-500f, RegisterLocationsLogic);
 
             RequestBuilder.OnUpdate.Subscribe(float.NegativeInfinity, SetupCostManagement);
             RequestBuilder.OnUpdate.Subscribe(-500f, SetupGrassShopRefs);
@@ -50,7 +52,7 @@ namespace GrassRando.Rando
 
         private static bool ConvertCosts(LogicCost lc, out Cost? cost)
         {
-            if (lc is Costs.BreakableLogicCost cic)
+            if (lc is BreakableLogicCost cic)
             {
                 cost = cic.GetIcCost();
                 return true;
@@ -73,6 +75,13 @@ namespace GrassRando.Rando
                     AdditionalProgressionPenalty = true,
                 };
             });
+        }
+
+        public static void RegisterWaypointLogic(GenerationSettings gs, LogicManagerBuilder lmb)
+        {
+            if (!GrassRandoMod.Instance.settings.Enabled) { return; }
+
+            lmb.DeserializeFile(LogicFileType.Waypoints, new JsonLogicFormat(), typeof(GrassRandoMod).Assembly.GetManifestResourceStream($"GrassRandoV2.Resources.waypoints.json"));
         }
 
         public static void RegisterItemsLogic(GenerationSettings gs, LogicManagerBuilder lmb)

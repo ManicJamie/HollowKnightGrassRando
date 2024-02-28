@@ -64,10 +64,12 @@
     <None Remove="README.md" />
     <None Remove="Resources\grassIcon.png" />
     <None Remove="Resources\Locations.json" />
+    <None Remove="Resources\waypoints.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\grassIcon.png" />
     <EmbeddedResource Include="Resources\Locations.json" />
+    <EmbeddedResource Include="Resources\waypoints.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -127,6 +129,9 @@
     <Reference Include="RandomizerCore">
       <HintPath>$(HollowKnightRefs)/Mods/RandomizerCore/RandomizerCore.dll</HintPath>
     </Reference>
+	  <Reference Include="RandomizerCore.Json">
+		  <HintPath>$(HollowKnightRefs)/Mods/RandomizerCore.Json/RandomizerCore.Json.dll</HintPath>
+	  </Reference>
     <Reference Include="RandomizerMod">
       <HintPath>$(HollowKnightRefs)/Mods/Randomizer 4/RandomizerMod.dll</HintPath>
     </Reference>

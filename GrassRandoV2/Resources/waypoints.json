@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Greenpath_Sheo_Gauntlet-Group_Right1",
+      "logic": "Fungus1_09[right1] | Fungus1_09[left1] + ((LEFTCLAW | RIGHTCLAW + WINGS | WINGS + $SHADESKIP | $SHRIEKPOGO[before:ROOMSOUL,after:AREASOUL]) + (SIDESLASH | GREATSLASH | CYCLONE | RIGHTDASHSLASH | LEFTDASHSLASH + DASHMASTER + OBSCURESKIPS) | FULLCLAW + RIGHTDASH + $SHRIEKPOGO[before:ROOMSOUL,after:AREASOUL])"
+    },
+    {
+        "name": "Greenpath_Sheo_Gauntlet-Group_Left1",
+        "logic": "Fungus1_09[left1] | Fungus1_09[right1] + (LEFTCLAW + (LEFTSUPERDASH + RIGHTCLAW + (LEFTDASH | WINGS) | WINGS + LEFTDASH) | RIGHTCLAW + LEFTDASH + WINGS + LEFTSUPERDASH + DANGEROUSSKIPS + PRECISEMOVEMENT | LEFTDASH + (RIGHTCLAW + $SHRIEKPOGO[1,1,1,before:AREASOUL,after:AREASOUL] | $SHRIEKPOGO[1,1,1,1,1,1,before:AREASOUL,after:AREASOUL]) | LEFTCLAW + (RIGHTCLAW | DIFFICULTSKIPS) + $SHRIEKPOGO[2,before:AREASOUL,after:AREASOUL,NOSTALL])"
+    },
+    {
+      "name": "Greenpath_Sheo_Gauntlet-Group_Upper",
+      "logic": "Greenpath_Sheo_Gauntlet-Group_Left1 + (ANYCLAW | $SHRIEKPOGO[1])"
+    },
+    {
+      "name": "Greenpath_Sheo_Gauntlet-Group_1",
+      "logic": "(Greenpath_Sheo_Gauntlet-Group_Left1 + ((RIGHTCLAW | WINGS) + RIGHTSUPERDASH | ENEMYPOGOS + ((RIGHTDASH | WINGS) + RIGHTCLAW) | (RIGHTDASH + WINGS))) | (Greenpath_Sheo_Gauntlet-Group_2 + (LEFTSUPERDASH | (ENEMYPOGOS)))"
+    },
+    {
+      "name": "Greenpath_Sheo_Gauntlet-Group_2",
+      "logic": "(Greenpath_Sheo_Gauntlet-Group_1 + WINGS + (RIGHTSUPERDASH | ENEMYPOGOS)) | Greenpath_Sheo_Gauntlet-Group_3"
+    },
+    {
+        "name": "Greenpath_Sheo_Gauntlet-Group_3",
+        "logic": "(Greenpath_Sheo_Gauntlet-Group_2 + $SHRIEKPOGO[1,before:AREASOUL,after:AREASOUL] + LEFTCLAW + RIGHTDASH) | (Fungus1_09[right1] + (LEFTCLAW + (LEFTSUPERDASH + RIGHTCLAW + (LEFTDASH | WINGS) | WINGS + LEFTDASH) | RIGHTCLAW + LEFTDASH + WINGS + LEFTSUPERDASH + DANGEROUSSKIPS + PRECISEMOVEMENT | LEFTDASH + (RIGHTCLAW + $SHRIEKPOGO[1,1,1,before:AREASOUL,after:AREASOUL] | $SHRIEKPOGO[1,1,1,1,1,1,before:AREASOUL,after:AREASOUL]) | LEFTCLAW + (RIGHTCLAW | DIFFICULTSKIPS) + $SHRIEKPOGO[2,before:AREASOUL,after:AREASOUL,NOSTALL]))"
+    },
+]
