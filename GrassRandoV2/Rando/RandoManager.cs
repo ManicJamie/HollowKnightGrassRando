@@ -156,8 +156,8 @@ namespace GrassRando.Rando
             if (!GrassRandoMod.Instance.settings.Enabled) { return; }
 
             var connectionSettings = GrassRandoMod.Instance.settings;
-            var includedLocations = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes);
-            foreach (var loc in includedLocations)
+            var locations = GrassDataRegister.gd;
+            foreach (var loc in locations)
             {
                 if (connectionSettings.allowedAreas.HasFlag(loc.grassArea) && connectionSettings.allowedAreaTypes.HasFlag(loc.areaType))
                 {
