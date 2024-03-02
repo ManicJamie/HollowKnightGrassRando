@@ -11,11 +11,11 @@ namespace GrassRando.Data
 {
     public static class GrassDataRegister
     {
-        public readonly static List<GrassData_New> gd = JsonUtil.Deserialize<List<GrassData_New>>("GrassRandoV2.Resources.Locations.json");
+        public readonly static List<GrassData> gd = JsonUtil.Deserialize<List<GrassData>>("GrassRandoV2.Resources.Locations.json");
 
-        public static List<GrassData_New> Filtered(GrassArea includedAreas, AreaType includedSubAreas)
+        public static List<GrassData> Filtered(GrassArea includedAreas, AreaType includedSubAreas)
         {
-            List<GrassData_New> output = new();
+            List<GrassData> output = new();
             foreach (var g in gd)
             {
                 if (includedAreas.HasFlag(g.grassArea) && includedSubAreas.HasFlag(g.areaType))

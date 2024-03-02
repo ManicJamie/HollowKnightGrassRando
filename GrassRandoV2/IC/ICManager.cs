@@ -88,7 +88,7 @@ namespace GrassRando.IC
             };
         }
 
-        private static BreakableGrassLocation CreateGrassLocation(GrassData_New gd)
+        private static BreakableGrassLocation CreateGrassLocation(GrassData gd)
         {
             return new(gd.key)
             {

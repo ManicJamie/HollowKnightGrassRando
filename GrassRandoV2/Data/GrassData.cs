@@ -13,7 +13,7 @@ namespace GrassRando.Data
     /// <summary>
     /// GrassData object as deserialised from the json
     /// </summary>
-    public class GrassData_New
+    public class GrassData
     {
         [JsonProperty]
         public string locationName = ""; // Logic-safe name, based on HKTranslated scene name & integer id per-scene.
@@ -34,7 +34,7 @@ namespace GrassRando.Data
         [JsonIgnore] // Constructed below
         internal GrassKey key;
 
-        public GrassData_New(string sceneName, string objectName, float x, float y)
+        public GrassData(string sceneName, string objectName, float x, float y)
         {
             key = new(sceneName, objectName, x, y);
         }
