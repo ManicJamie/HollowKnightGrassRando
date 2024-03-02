@@ -25,11 +25,12 @@ namespace GrassRando.IC.Costs
         }
         public override string GetCostText()
         {
-            return type switch
+            var name = type switch
             {
-                BreakableType.Grass => Language.Language.Get("", "Exact"),
+                BreakableType.Grass => Language.Language.Get("Grass", "Exact"),
                 _ => ""
             };
+            return $"{amount} {name}";
         }
     }
 }
