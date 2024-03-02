@@ -21,12 +21,14 @@ using RandomizerMod.IC;
 using RandomizerCore.Json;
 using GrassRando.Settings;
 using UnityEngine;
+using RandomizerCore.Randomization;
 
 namespace GrassRando.Rando
 {
     internal static class RandoManager
     {
         private const string ItemName = "Grass";
+        private const string ShopName = "Grass_Shop";
         private const string ShopLogic = "Room_Slug_Shrine[left1] | Bench-Lake_of_Unn"; // This logic copies the Room_Slug_Shrine logic; using it directly should be preferable if possible.
 
         private static BreakableLogicCostProvider? breakableCostProvider;
@@ -41,6 +43,7 @@ namespace GrassRando.Rando
             RequestBuilder.OnUpdate.Subscribe(-500f, SetupGrassShopRefs);
             RequestBuilder.OnUpdate.Subscribe(-100f, ApplyShopCostRandomization);
             RequestBuilder.OnUpdate.Subscribe(0f, BuildRequest);
+            RequestBuilder.OnUpdate.Subscribe(100f, ApplyGrassShopConstraint);
 
             SettingsLog.AfterLogSettings += LogRandoSettings;
 
@@ -68,11 +71,11 @@ namespace GrassRando.Rando
         {
             if (!GrassRandoMod.Instance.settings.Enabled) return;
 
-            rb.EditLocationRequest("Grass_Shop", info =>
+            rb.EditLocationRequest(ShopName, info =>
             {
                 info.getLocationDef = () => new LocationDef()
                 {
-                    Name = "Grass_Shop",
+                    Name = ShopName,
                     SceneName = SceneNames.Room_Slug_Shrine,
                     FlexibleCount = true,
                     AdditionalProgressionPenalty = true,
@@ -106,7 +109,7 @@ namespace GrassRando.Rando
             {
                 lmb.AddLogicDef(new(loc.locationName, loc.logic));
             }
-            lmb.AddLogicDef(new("Grass_Shop", ShopLogic));
+            lmb.AddLogicDef(new(ShopName, ShopLogic));
         }
 
         // Cost randomization taken from BadMagic100/MoreLocations under MIT
@@ -122,7 +125,7 @@ namespace GrassRando.Rando
 
             if (!GrassRandoMod.Instance.settings.Enabled) return;
 
-            rb.EditLocationRequest("Grass_Shop", info =>
+            rb.EditLocationRequest(ShopName, info =>
             {
                 info.customPlacementFetch += (factory, rp) =>
                 {
@@ -152,6 +155,26 @@ namespace GrassRando.Rando
                 };
             });
             
+        }
+
+        public static void ApplyGrassShopConstraint(RequestBuilder rb)
+        {
+            foreach (var igb in rb.EnumerateItemGroups())
+            {
+                if (igb.strategy is DefaultGroupPlacementStrategy dgps)
+                {
+                    dgps.ConstraintList.Add(new(PreventGrassInGrassShop, null, "GrassRando Grass Shop Constraint"));
+                }
+            }
+
+            static bool PreventGrassInGrassShop(IRandoItem ri, IRandoLocation rl)
+            {
+                if (ri is GrassItem && rl is RandoModLocation rml && rml.LocationDef.Name == ShopName) 
+                {
+                    return false;
+                }
+                return true;
+            }
         }
 
         public static void BuildRequest(RequestBuilder rb)
