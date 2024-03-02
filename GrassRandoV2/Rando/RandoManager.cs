@@ -19,6 +19,8 @@ using GrassRando.Rando.Costs;
 using GrassRando.IC.Costs;
 using RandomizerMod.IC;
 using RandomizerCore.Json;
+using GrassRando.Settings;
+using UnityEngine;
 
 namespace GrassRando.Rando
 {
@@ -47,9 +49,10 @@ namespace GrassRando.Rando
 
         public static void SetupCostManagement(RequestBuilder rb)
         {
-            breakableCostProvider = new("GRASS", 50, 200, amount => new IC.Costs.BreakableCost(amount, BreakableType.Grass));
+            var connectionSettings = GrassRandoMod.Instance.settings;
+            int count = GrassDataRegister.Filtered(connectionSettings.allowedAreas, connectionSettings.allowedAreaTypes).Count;
+            breakableCostProvider = new("GRASS", (int)(0.2 * count), (int)(0.8 * count), amount => new BreakableCost(amount, BreakableType.Grass));
         }
-
         private static bool ConvertCosts(LogicCost lc, out Cost? cost)
         {
             if (lc is BreakableLogicCost cic)
