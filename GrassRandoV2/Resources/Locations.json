@@ -1439,18 +1439,18 @@
         "x": 193.13,
         "y": 10.54
     },
-    {
-        "locationName": "Grass-Basin_Corridor_to_Broken_Vessel-5",
-        "id": 5,
-        "spriteTarget": 0,
-        "grassArea": 2048,
-        "areaType": 0,
-        "logic": "Abyss_18[left1] | (Abyss_18[right1] + LEFTSUPERDASH)",
-        "sceneName": "Abyss_18",
-        "objectName": "black_grass4 (2)",
-        "x": 11.38,
-        "y": 17.14
-    },
+    // {
+    //     "locationName": "Grass-Basin_Corridor_to_Broken_Vessel-5",
+    //     "id": 5,
+    //     "spriteTarget": 0,
+    //     "grassArea": 2048,
+    //     "areaType": 0,
+    //     "logic": "Abyss_18[left1] | (Abyss_18[right1] + LEFTSUPERDASH)",
+    //     "sceneName": "Abyss_18",
+    //     "objectName": "black_grass4 (2)",
+    //     "x": 11.38,
+    //     "y": 17.14
+    // },
     {
         "locationName": "Grass-Basin_Broken_Vessel_Grub-0",
         "id": 0,
