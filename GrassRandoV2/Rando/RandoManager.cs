@@ -202,7 +202,7 @@ namespace GrassRando.Rando
 
         public static void LogRandoSettings(LogArguments args, TextWriter w)
         {
-            w.WriteLine("Logging RopeRando settings:");
+            w.WriteLine("Logging GrassRando settings:");
             w.WriteLine(RandomizerMod.RandomizerData.JsonUtil.Serialize(GrassRandoMod.Instance.settings));
         }
     }
