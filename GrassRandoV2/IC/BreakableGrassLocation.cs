@@ -39,7 +39,9 @@ namespace GrassRando.IC
         {
             if (!Placement.AllObtained())
             {
-                MessageType mt = GrassRandoMod.Instance.settings.DisplayItems ? MessageType.Corner : MessageType.None;
+                MessageType mt = GrassRandoMod.Instance.settings.DisplayItems
+                    ? MessageType.Corner
+                    : (Placement.Items.Where((item) => item is not GrassItem).Count() > 0) ? MessageType.Corner : MessageType.None;
                 Placement.GiveAll(new GiveInfo() { FlingType = FlingType.DirectDeposit, MessageType = mt });
             }
         }

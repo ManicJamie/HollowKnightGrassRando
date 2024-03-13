@@ -31,6 +31,7 @@ namespace GrassRando.Data
 
         // Helpers
         KPDirtmouth = KP | Dirtmouth,
+        All = (1 << 15) - 1,
     }
 
     [Flags]

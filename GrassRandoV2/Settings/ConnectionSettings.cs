@@ -11,7 +11,9 @@ namespace GrassRando.Settings
     public class ConnectionSettings
     {
         [MenuInclude] public bool Enabled { get; set; }
-        [MenuInclude] public bool DisplayItems { get; set; }
+        [MenuInclude]
+        [MenuLabel("Display Grass Items")]
+        public bool DisplayItems { get; set; }
         [MenuInclude] public bool GrassShop { get; set; }
 
         private bool GetGrassAreaFlagBit(GrassArea bit) => (allowedAreas & bit) != 0;
