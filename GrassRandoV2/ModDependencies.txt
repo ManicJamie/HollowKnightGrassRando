@@ -2,5 +2,5 @@ ItemChanger
 MenuChanger
 Randomizer 4
 RandomizerCore
-RandoMapMod
-MapChanger
+GrassCore
+RandoSettingsManager
