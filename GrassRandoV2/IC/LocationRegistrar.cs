@@ -19,6 +19,9 @@ namespace GrassRando.IC
         private static LocationRegistrar? _instance;
         public static LocationRegistrar Instance { get { _instance ??= new LocationRegistrar(); return _instance; }  }
 
+        public delegate void GrassRoomCounterUpdate((int, int) counts);
+        public event GrassRoomCounterUpdate? UpdateGrassRoomCount;
+
         public LocationRegistrar()
         {
             GrassEventDispatcher.GrassWasCut += GrassCutHandler;
@@ -28,6 +31,7 @@ namespace GrassRando.IC
         private void SetActiveScene(Scene source, Scene target)
         {
             if (!GrassLocations.TryGetValue(target.name, out activeSceneGrassLocations)) activeSceneGrassLocations = null;
+            UpdateGrassRoomCount?.Invoke(GetCountsInScene(target.name));
         }
 
         public void Add(BreakableGrassLocation location)
@@ -49,6 +53,14 @@ namespace GrassRando.IC
         {
             if (!GrassLocations.TryGetValue(sceneName, out var sceneDict)) { return new(); }
             return sceneDict;
+        }
+
+        public (int, int) GetCountsInScene(string sceneName)
+        {
+            var locs = GetLocationsInScene(sceneName);
+            int locsChecked = locs.Values.Where((g) => g.Placement.Visited != ItemChanger.VisitState.None).Count();
+            int locsTotal = locs.Values.Count();
+            return (locsChecked, locsTotal);
         }
 
         /// <summary>
@@ -93,13 +105,6 @@ namespace GrassRando.IC
             return obtained;
         }
 
-        private BreakableGrassLocation? GetLocation(GrassKey key)
-        {
-            if (!GrassLocations.TryGetValue(key.SceneName, out Dictionary<GrassKey, BreakableGrassLocation> sceneDict)) { return null; }
-            if (!sceneDict.TryGetValue(key, out BreakableGrassLocation location)) { return null; }
-            return location;
-        }
-
         private BreakableGrassLocation? GetLocalLocation(GrassKey key)
         {
             if (!(activeSceneGrassLocations?.TryGetValue(key, out BreakableGrassLocation location) ?? false)) { return null; }
@@ -112,6 +117,7 @@ namespace GrassRando.IC
             if (location == null) { return; }
 
             location.Obtain();
+            UpdateGrassRoomCount?.Invoke(GetCountsInScene(key.SceneName));
         }
 
         private void TryAddScene(string sceneName)

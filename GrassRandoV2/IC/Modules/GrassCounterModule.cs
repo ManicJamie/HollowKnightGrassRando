@@ -26,6 +26,8 @@ namespace GrassRandoV2.IC.Modules
 
             GrassItem.GrassGiven += UpdateGrassCount;
 
+            LocationRegistrar.Instance.UpdateGrassRoomCount += UpdateLocalGrassCount;
+
             UtilBehaviour.OnUpdate += EnsureGrassCountAttached;
         }
 
@@ -60,6 +62,12 @@ namespace GrassRandoV2.IC.Modules
         private void UpdateGrassCount(int newCount)
         {
             grassCounter?.UpdateGrassCount(newCount);
+        }
+
+        private void UpdateLocalGrassCount((int, int) countTuple)
+        {
+            var (newCount, totalCount) = countTuple;
+            grassCounter?.UpdateLocalGrassCount(newCount, totalCount);
         }
     }
 
@@ -167,6 +175,7 @@ namespace GrassRandoV2.IC.Modules
         public float Scale = 0.6f;
 
         private GameObject? _globalCount = null;
+        private GameObject? _localCount = null;
 
         public void Start()
         {
@@ -194,9 +203,25 @@ namespace GrassRandoV2.IC.Modules
             _layout.Add(new RowLayoutObject
             {
                 MinWidth = 0,
+                WidthStepSize = 0.5f,
+                PaddingRight = 0.2f,
+                GameObject_ = _globalCount,
+            });
+            _layout.Add(new RowLayoutObject
+            {
+                MinWidth = 0,
+                WidthStepSize = 0,
+                PaddingRight = 0.2f,
+                GameObject_ = CreateSpriteObject(
+                   "Grass Sprite", "grassIcon.png"), //TODO: change sprite or move below existing count
+            });
+            _localCount = CreateTextObject("Local Grass Count");
+            _layout.Add(new RowLayoutObject
+            {
+                MinWidth = 0,
                 WidthStepSize = 0,
                 PaddingRight = 0,
-                GameObject_ = _globalCount,
+                GameObject_ = _localCount,
             });
         }
 
@@ -345,6 +370,12 @@ namespace GrassRandoV2.IC.Modules
         {
             if (_globalCount == null) return;
             _globalCount.GetComponent<TextMesh>().text = $"{newCount}";
+        }
+
+        public void UpdateLocalGrassCount(int newCount, int totalCount)
+        {
+            if (_localCount == null) return;
+            _localCount.GetComponent<TextMesh>().text = $"{newCount} | {totalCount}";
         }
     }
 }
