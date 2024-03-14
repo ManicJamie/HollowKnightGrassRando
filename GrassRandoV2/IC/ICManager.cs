@@ -102,7 +102,8 @@ namespace GrassRando.IC
                             mapLocations: new (string, float, float)[]
                             {
                                 gd.mapSceneOverride ?? (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
-                            }
+                            },
+                            compassLocation: (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
                         ),
                     }
             };

@@ -24,7 +24,7 @@ namespace GrassRando.IC
         private const string CmiMapLocationsProperty = "WorldMapLocations";
         private const string CmiMapNoPin = "DoNotMakePin";
         private const string CmiGridSort = "PinGridIndex";
-
+        private const string CmiCompassLocation = "CompassLocation";
         private const string RiMessageProperty = "DisplayMessage";
         private const string RiSourceProperty = "DisplaySource";
         private const string RiIgnoreProperty = "IgnoreItem";
@@ -46,7 +46,8 @@ namespace GrassRando.IC
 
         public static InteropTag CmiLocationTag(string? poolGroup = null, ISprite? pinSprite = null,
             IEnumerable<string>? sceneNames = null, IEnumerable<string>? titledAreas = null, IEnumerable<string>? mapAreas = null,
-            string[]? highlightScenes = null, (string, float, float)[]? mapLocations = null, bool? noPin = null, int? pinSort = null)
+            string[]? highlightScenes = null, (string, float, float)[]? mapLocations = null, bool? noPin = null, int? pinSort = null,
+            (string, float, float)? compassLocation = null)
         {
             InteropTag t = CmiSharedTag(poolGroup: poolGroup, pinSprite: pinSprite);
             t.SetProperty(CmiSceneNamesProperty, sceneNames);
@@ -56,6 +57,7 @@ namespace GrassRando.IC
             t.SetProperty(CmiMapLocationsProperty, mapLocations);
             t.SetProperty(CmiMapNoPin, noPin);
             t.SetProperty(CmiGridSort, pinSort);
+            t.SetProperty(CmiCompassLocation, compassLocation);
             return t;
         }
 
