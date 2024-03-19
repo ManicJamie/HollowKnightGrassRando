@@ -21,6 +21,7 @@ namespace GrassRando.IC
         private const string CmiMapAreasProperty = "MapAreas";
         private const string CmiHighlightScenesProperty = "HighlightScenes";
         private const string CmiPinSpriteProperty = "PinSprite";
+        private const string CmiPinSpriteSizeProperty = "PinSpriteSize";
         private const string CmiMapLocationsProperty = "WorldMapLocations";
         private const string CmiMapNoPin = "DoNotMakePin";
         private const string CmiGridSort = "PinGridIndex";
@@ -29,7 +30,7 @@ namespace GrassRando.IC
         private const string RiSourceProperty = "DisplaySource";
         private const string RiIgnoreProperty = "IgnoreItem";
 
-        public static InteropTag CmiSharedTag(string? poolGroup = null, ISprite? pinSprite = null)
+        public static InteropTag CmiSharedTag(string? poolGroup = null, ISprite? pinSprite = null, (int, int)? pinSpriteSize = null)
         {
             InteropTag t = new()
             {
@@ -41,15 +42,16 @@ namespace GrassRando.IC
             };
             t.SetProperty(CmiPoolGroupProperty, poolGroup!);
             t.SetProperty(CmiPinSpriteProperty, pinSprite!);
+            t.SetProperty(CmiPinSpriteSizeProperty, pinSpriteSize!);
             return t;
         }
 
-        public static InteropTag CmiLocationTag(string? poolGroup = null, ISprite? pinSprite = null,
+        public static InteropTag CmiLocationTag(string? poolGroup = null, ISprite? pinSprite = null, (int, int)? pinSpriteSize = null,
             IEnumerable<string>? sceneNames = null, IEnumerable<string>? titledAreas = null, IEnumerable<string>? mapAreas = null,
             string[]? highlightScenes = null, (string, float, float)[]? mapLocations = null, bool? noPin = null, int? pinSort = null,
             (string, float, float)? compassLocation = null)
         {
-            InteropTag t = CmiSharedTag(poolGroup: poolGroup, pinSprite: pinSprite);
+            InteropTag t = CmiSharedTag(poolGroup: poolGroup, pinSprite: pinSprite, pinSpriteSize: pinSpriteSize);
             t.SetProperty(CmiSceneNamesProperty, sceneNames);
             t.SetProperty(CmiTitledAreasProperty, titledAreas);
             t.SetProperty(CmiMapAreasProperty, mapAreas);

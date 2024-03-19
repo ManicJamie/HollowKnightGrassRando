@@ -72,7 +72,7 @@ namespace GrassRando.IC
                 },
                 tags = new()
                     {
-                        InteropTagFactory.CmiSharedTag(poolGroup: "Grass")
+                        InteropTagFactory.CmiSharedTag(poolGroup: "Grass", pinSprite: new SmallGrassSprite(), pinSpriteSize: SmallGrassSprite.size)
                     }
             };
         }
@@ -103,7 +103,9 @@ namespace GrassRando.IC
                             {
                                 gd.mapSceneOverride ?? (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
                             },
-                            compassLocation: (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
+                            compassLocation: (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y),
+                            pinSprite: new SmallGrassSprite(),
+                            pinSpriteSize: SmallGrassSprite.size
                         ),
                     }
             };

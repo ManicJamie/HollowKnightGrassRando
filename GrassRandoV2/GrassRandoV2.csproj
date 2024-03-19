@@ -64,11 +64,13 @@
     <None Remove="README.md" />
     <None Remove="Resources\grassIcon.png" />
     <None Remove="Resources\Locations.json" />
+    <None Remove="Resources\smallGrassIcon.png" />
     <None Remove="Resources\waypoints.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\grassIcon.png" />
     <EmbeddedResource Include="Resources\Locations.json" />
+    <EmbeddedResource Include="Resources\smallGrassIcon.png" />
     <EmbeddedResource Include="Resources\waypoints.json" />
   </ItemGroup>
   <ItemGroup>
