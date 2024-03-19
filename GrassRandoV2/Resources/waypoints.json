@@ -468,26 +468,6 @@
         "logic": "Fungus1_08[left1]"
     },
     {
-        "name": "Greenpath_Sheo_Gauntlet-Group_0",
-        "logic": "Greenpath_Sheo_Gauntlet-Group_Right1"
-    },
-    {
-        "name": "Greenpath_Sheo_Gauntlet-Group_1",
-        "logic": "Greenpath_Sheo_Gauntlet-Group_1"
-    },
-    {
-        "name": "Greenpath_Sheo_Gauntlet-Group_2",
-        "logic": "Greenpath_Sheo_Gauntlet-Group_Left1"
-    },
-    {
-        "name": "Greenpath_Sheo_Gauntlet-Group_3",
-        "logic": "Greenpath_Sheo_Gauntlet-Group_Upper"
-    },
-    {
-        "name": "Greenpath_Sheo_Gauntlet-Group_4",
-        "logic": "Greenpath_Sheo_Gauntlet-Group_3"
-    },
-    {
         "name": "Greenpath_Sheo_Gauntlet-Group_Right1",
         "logic": "Fungus1_09[right1] | Fungus1_09[left1] + ((LEFTCLAW | RIGHTCLAW + WINGS | WINGS + $SHADESKIP | $SHRIEKPOGO[before:ROOMSOUL,after:AREASOUL]) + (SIDESLASH | GREATSLASH | CYCLONE | RIGHTDASHSLASH | LEFTDASHSLASH + DASHMASTER + OBSCURESKIPS) | FULLCLAW + RIGHTDASH + $SHRIEKPOGO[before:ROOMSOUL,after:AREASOUL])"
       },
