@@ -17,7 +17,7 @@
     },
     {
         "name": "Basin_Simple_Key-Group_0",
-        "logic": "Abyss_20[top1] | (Abyss_20[top2] + (LEFTCLAW | ENEMYPOGOS | RIGHTCLAW))"
+        "logic": "Abyss_20[top1] | Abyss_20[top2] + (LEFTCLAW | ENEMYPOGOS + WINGS)"
     },
     {
         "name": "Basin_Simple_Key-Group_1",
@@ -220,12 +220,20 @@
         "logic": "Crossroads_48[left1]"
     },
     {
-        "name": "Grounds_Blue_Lake-Group_0",
-        "logic": "Crossroads_50[left1] | (Crossroads_50[right1] + LEFTCLAW + (SWIM | LEFTSUPERDASH))"
+        "name": "Grounds_Blue_Lake-Group_Left1",
+        "logic": "Crossroads_50[left1] | Crossroads_50[right1] + (LEFTSUPERDASH | SWIM) + (ANYCLAW | WINGS)"
     },
     {
-        "name": "Grounds_Blue_Lake-Group_1",
-        "logic": "(Crossroads_50[left1] | (Crossroads_50[right1] + LEFTCLAW + (SWIM | LEFTSUPERDASH))) + RIGHTSUPERDASH"
+        "name": "Grounds_Blue_Lake-Group_Egg",
+        "logic": "Crossroads_50[left1] + (RIGHTSUPERDASH | RIGHTDASH + $SHRIEKPOGO[1,1]) | (Crossroads_50[left1] | Crossroads_50[right1]) + SWIM + (WINGS + ENEMYPOGOS | $SHRIEKPOGO[2,before:MAPAREASOUL]) | Crossroads_50[right1] + LEFTSUPERDASH + COMPLEXSKIPS + $SHRIEKPOGO[3,before:MAPAREASOUL]"
+    },
+    {
+        "name": "Grounds_Blue_Lake-Group_LeftMid",
+        "logic": "Crossroads_50[left1] | Crossroads_50[right1] + (LEFTSUPERDASH | SWIM) + (ANYCLAW | WINGS)"
+    },
+    {
+        "name": "Grounds_Blue_Lake-Group_LeftShore",
+        "logic": "Crossroads_50[left1] | Crossroads_50[right1] + (LEFTSUPERDASH | SWIM)"
     },
     {
         "name": "Deepnest_Outside_Mask_Maker-Group_0",
@@ -497,11 +505,11 @@
     },
     {
         "name": "Greenpath_Acid_Bridge-Group_1",
-        "logic": "(Fungus1_10[left1] |Fungus1_10[right1] | Fungus1_10[top1]) + (LEFTDASH | RIGHTDASH | RIGHTCLAW | WINGS | FIREBALLSKIPS + (FIREBALL | SCREAM))"
+        "logic": "(Fungus1_10[left1] | Fungus1_10[right1] | Fungus1_10[top1]) + (ANYDASH | RIGHTCLAW | WINGS | SPELLAIRSTALL + $CASTSPELL[2,before:ROOMSOUL] | $SHADESKIP | LEFTCLAW + OBSCURESKIPS + PRECISEMOVEMENT)"
     },
     {
         "name": "Greenpath_Acid_Bridge-Group_2",
-        "logic": "(Fungus1_10[left1] |Fungus1_10[right1] | Fungus1_10[top1]) + (LEFTDASH | ACID | LEFTSUPERDASH)"
+        "logic": "(Fungus1_10[left1] | Fungus1_10[top1] | Fungus1_10[right1]) + (ACID | WINGS + SPELLAIRSTALL + $CASTSPELL[before:ROOMSOUL] | LEFTDASH + (SPELLAIRSTALL + $CASTSPELL[before:ROOMSOUL] | DASHMASTER + OBSCURESKIPS | WINGS | LEFTCLAW) | LEFTSUPERDASH)"
     },
     {
         "name": "Greenpath_MMC_Corridor-Group_0",
