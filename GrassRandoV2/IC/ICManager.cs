@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using GrassRando.Data;
 using ItemChanger.UIDefs;
-using UnityEngine.XR;
 
 namespace GrassRando.IC
 {
@@ -89,7 +88,7 @@ namespace GrassRando.IC
         }
 
         private static BreakableGrassLocation CreateGrassLocation(GrassData gd)
-        {
+        { 
             return new(gd.key)
             {
                 name = gd.locationName,
@@ -98,13 +97,13 @@ namespace GrassRando.IC
                 tags = new()
                     {
                         InteropTagFactory.CmiLocationTag(
-                            poolGroup: gd.GetGroupName(),
+                            poolGroup: "Grass",
                             mapLocations: new (string, float, float)[]
                             {
                                 gd.mapSceneOverride ?? (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
                             },
                             compassLocation: (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
-                        ),
+                        )
                     }
             };
             
