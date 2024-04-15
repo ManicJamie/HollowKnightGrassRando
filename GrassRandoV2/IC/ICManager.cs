@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using GrassRando.Data;
 using ItemChanger.UIDefs;
-using UnityEngine.XR;
 
 namespace GrassRando.IC
 {
@@ -98,7 +97,7 @@ namespace GrassRando.IC
                 tags = new()
                     {
                         InteropTagFactory.CmiLocationTag(
-                            poolGroup: gd.GetGroupName(),
+                            poolGroup: "Grass",
                             mapLocations: new (string, float, float)[]
                             {
                                 gd.mapSceneOverride ?? (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y)
@@ -106,7 +105,7 @@ namespace GrassRando.IC
                             compassLocation: (gd.key.SceneName, gd.key.Position.x, gd.key.Position.y),
                             pinSprite: new SmallGrassSprite(),
                             pinSpriteSize: SmallGrassSprite.size
-                        ),
+                        )
                     }
             };
             
