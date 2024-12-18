@@ -72,26 +72,6 @@ namespace GrassRandoV2.IC.Modules
     }
 
     // Stripped down counter from GrassyKnight.
-    class Behaviour : MonoBehaviour
-    {
-        public event EventHandler? OnUpdate;
-
-        public void Update()
-        {
-            OnUpdate?.Invoke(this, EventArgs.Empty);
-        }
-
-        public static Behaviour CreateBehaviour()
-        {
-            // A game object that will do nothing quietly in the corner until
-            // the end of time.
-            GameObject dummy = new("Behavior Container", typeof(Behaviour));
-            DontDestroyOnLoad(dummy);
-
-            return dummy.GetComponent<Behaviour>();
-        }
-    }
-
     class GrassCounter : MonoBehaviour
     {
         private class RowLayoutObject

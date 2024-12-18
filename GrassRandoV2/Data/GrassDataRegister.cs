@@ -1,4 +1,5 @@
-﻿using GrassRando.IC;
+﻿using GrassCore;
+using GrassRando.IC;
 using GrassRando.Rando;
 using RandomizerCore.Logic;
 using RandomizerMod.RandomizerData;
@@ -14,6 +15,16 @@ namespace GrassRando.Data
     {
         public readonly static List<GrassData> gd = JsonUtil.Deserialize<List<GrassData>>("GrassRandoV2.Resources.Locations.json");
         public readonly static List<RawWaypointDef> waypoints = JsonUtil.Deserialize<List<RawWaypointDef>>("GrassRandoV2.Resources.waypoints.json");
+
+        public readonly static Dictionary<GrassKey, GrassData> dict = new();
+
+        static GrassDataRegister()
+        {
+            foreach (var g in gd)
+            {
+                dict[g.key] = g; 
+            }
+        }
 
         public static List<GrassData> Filtered(GrassArea includedAreas, AreaType includedSubAreas)
         {

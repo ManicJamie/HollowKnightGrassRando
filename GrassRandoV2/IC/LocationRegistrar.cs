@@ -14,7 +14,7 @@ namespace GrassRando.IC
         public Dictionary<string, Dictionary<GrassKey, BreakableGrassLocation>> GrassLocations = new();
 
         // Keep a living "hot dict" to reduce access time
-        public Dictionary<GrassKey, BreakableGrassLocation>? activeSceneGrassLocations = new();
+        public Dictionary<GrassKey, BreakableGrassLocation> activeSceneGrassLocations = new();
 
         private static LocationRegistrar? _instance;
         public static LocationRegistrar Instance { get { _instance ??= new LocationRegistrar(); return _instance; }  }

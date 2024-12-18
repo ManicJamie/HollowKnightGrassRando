@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GrassCore;
+using UnityEngine;
 
 namespace GrassRando.Data
 {
@@ -16,9 +17,20 @@ namespace GrassRando.Data
 
         public static T Deserialize<T>(string embeddedResourcePath)
         {
-            using StreamReader reader = new StreamReader(typeof(JsonUtil).Assembly.GetManifestResourceStream(embeddedResourcePath));
-            using JsonTextReader reader2 = new JsonTextReader(reader);
-            return _js.Deserialize<T>(reader2)!;
+            using JsonTextReader reader = new(new StreamReader(typeof(JsonUtil).Assembly.GetManifestResourceStream(embeddedResourcePath)));
+            return _js.Deserialize<T>(reader)!;
+        }
+
+        public static T DeserializeFile<T>(string path)
+        {
+            using JsonTextReader reader = new(new StreamReader(Path.Combine(Application.persistentDataPath, $"{path}")));
+            return _js.Deserialize<T>(reader)!;
+        }
+
+        public static void Serialize<T>(T obj, string filePath)
+        {
+            using JsonTextWriter writer = new(new StreamWriter(Path.Combine(Application.persistentDataPath, $"{filePath}")));
+            _js.Serialize(writer, obj);
         }
 
         static JsonUtil()
@@ -30,24 +42,6 @@ namespace GrassRando.Data
                 TypeNameHandling = TypeNameHandling.Auto
             };
             _js.Converters.Add(new StringEnumConverter());
-        }
-    }
-
-    internal class GrassKeyJsonConverter : JsonConverter
-    {
-        public override bool CanConvert(Type objectType)
-        {
-            return objectType == typeof(GrassKey);
-        }
-
-        public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
-        {
-            throw new NotImplementedException();
         }
     }
 }
