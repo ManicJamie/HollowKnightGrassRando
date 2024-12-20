@@ -1,4 +1,5 @@
-﻿using GrassCore;
+﻿#if DEBUG  // Debug module displaying & providing functions to rewrite grass groups
+using GrassCore;
 using GrassRando;
 using GrassRando.Data;
 using GrassRando.IC;
@@ -16,7 +17,6 @@ using UnityEngine;
 
 namespace GrassRandoV2.IC.Modules
 {
-#if DEBUG  // Debug module displaying & providing functions to rewrite grass groups
     internal static class LogicOverrides
     {
         public static Dictionary<GrassKey, string> all = [];
@@ -182,5 +182,6 @@ namespace GrassRandoV2.IC.Modules
             return new Vector2((int)Math.Round(result.x), (int)Math.Round(Screen.height - result.y));
         }
     }
-#endif
+
 }
+#endif
