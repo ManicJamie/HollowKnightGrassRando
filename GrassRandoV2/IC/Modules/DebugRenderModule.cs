@@ -16,6 +16,7 @@ using UnityEngine;
 
 namespace GrassRandoV2.IC.Modules
 {
+#if DEBUG  // Debug module displaying & providing functions to rewrite grass groups
     internal static class LogicOverrides
     {
         public static Dictionary<GrassKey, string> all = [];
@@ -41,17 +42,14 @@ namespace GrassRandoV2.IC.Modules
             JsonUtil.Serialize(all, "GrassDump.json");
             GameManager.instance.Reflect().HideSaveIcon();
         }
-
-        public static void Deserialize()
-        {
-            all = JsonUtil.DeserializeFile<Dictionary<GrassKey, string>>("GrassDump.json");
-        }
     }
 
     internal class DebugRenderModule : Module
     {
         private Behaviour? UtilBehaviour;
         private GrassKey? lastKey = null;
+
+        private int newGroupId = 0;
 
         public override void Initialize()
         {
@@ -70,14 +68,16 @@ namespace GrassRandoV2.IC.Modules
             var undoListener = UtilBehaviour.gameObject.AddComponent<HotkeyListener>();
             undoListener.key = KeyCode.RightControl;
             undoListener.execute = () => {
-                if (lastKey != null && LogicOverrides.all.ContainsKey(lastKey.GetValueOrDefault())) 
+                if (LogicOverrides.all.Count > 0) 
                 {
                     LogicOverrides.DropLast();
                     LogicOverrides.Serialize();
                 }
             };
 
-            LogicOverrides.Deserialize();
+            var newGroup = UtilBehaviour.gameObject.AddComponent<HotkeyListener>();
+            newGroup.key = KeyCode.Menu;
+            newGroup.execute = NewGroup;
         }
 
         public override void Unload()
@@ -105,6 +105,25 @@ namespace GrassRandoV2.IC.Modules
                 lastKey = target.key;
                 LogicOverrides.Serialize();
             }
+        }
+
+        public void NewGroup()
+        {
+            var heroPos = (Vector2)HeroController.instance.gameObject.transform.position;
+            var ordered = LocationRegistrar.Instance.activeSceneGrassLocations
+                .Select(kvp => new
+                {
+                    key = kvp.Key,
+                    distance = (kvp.Key.Position - heroPos).magnitude,
+                    logic = LogicOverrides.GetOrDefault(kvp.Key, kvp.Value.GetLogicDef().InfixSource)
+                })
+                .OrderBy(info => info.distance).ToList();
+            var target = ordered.First();
+
+            var newGroup = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "_NEW_" + newGroupId++;
+            LogicOverrides.Override(target.key, newGroup);
+            lastKey = target.key;
+            LogicOverrides.Serialize();
         }
     }
 
@@ -163,4 +182,5 @@ namespace GrassRandoV2.IC.Modules
             return new Vector2((int)Math.Round(result.x), (int)Math.Round(Screen.height - result.y));
         }
     }
+#endif
 }
