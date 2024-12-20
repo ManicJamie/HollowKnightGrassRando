@@ -47,6 +47,7 @@
       <Output TaskParameter="Items" ItemName="ZipFilesWithHashes" />
     </GetFileHash>
     <WriteLinesToFile File="$(ExportDir)/$(TargetName)/SHA.txt" Lines="$(OutputFileString);@(FilesWithHashes->'%(FileHash)');$(OutputZipString);@(ZipFilesWithHashes->'%(FileHash)')" Overwrite="true" Encoding="UTF-8" />
+    <WriteLinesToFile File="$(ExportDir)/$(TargetName)/VERSION.txt" Lines="@(VersionNumber)" Overwrite="true" Encoding="UTF-8" />
   </Target>
   <ItemGroup>
     <Compile Remove="Resources\Sprites\**" />
