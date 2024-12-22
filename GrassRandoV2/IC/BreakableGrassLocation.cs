@@ -35,13 +35,14 @@ namespace GrassRando.IC
                 // Grass dump/render module for helping sort grass
                 ItemChangerMod.Modules.GetOrAdd<DebugRenderModule>();
             #else
-                // Get runtime logic overrides for RMM
-                InteropTag? CMITag = GetTags<InteropTag>()?.Where((t) => t.Message == "RandoSupplementalMetadata").FirstOrDefault();
-                var logic = GetLogicDef(name);
-                if (CMITag != null && logic != null && GrassDataRegister.IsWaypoint(logic.InfixSource))
-                {
-                    CMITag.Properties["Logic"] = GetLogicDef(logic.InfixSource);
-                }
+                // Not working: LogicDef is unserializable
+                //// Get runtime logic overrides for RMM
+                //var CMITag = GetTags<InteropTag>()?.Where((t) => t.Message == "RandoSupplementalMetadata").FirstOrDefault();
+                //var logic = GetLogicDef(name);
+                //if (CMITag != null && logic != null && GrassDataRegister.IsWaypoint(logic.InfixSource))
+                //{
+                //    CMITag.Properties["Logic"] = GetLogicDef(logic.InfixSource);
+                //}
             #endif
         }
 
