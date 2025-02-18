@@ -29,7 +29,8 @@ namespace GrassRando.Rando
     {
         private const string ItemName = "Grass";
         private const string ShopName = "Grass_Shop";
-        private const string ShopLogic = "Room_Slug_Shrine[left1] | Bench-Lake_of_Unn"; // This logic copies the Room_Slug_Shrine logic; using it directly should be preferable if possible.
+        private const string ShopLogic = "(Room_Slug_Shrine[left1] | Bench-Lake_of_Unn) + LISTEN?TRUE + QUIRREL?TRUE";
+        // Room_Slug_Shrine logic with coalescence for Lore Rando interop
 
         private static BreakableLogicCostProvider? breakableCostProvider;
 
